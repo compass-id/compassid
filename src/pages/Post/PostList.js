@@ -14,7 +14,7 @@ const PostList = () => {
   const [lang, setLang] = useState("id");
   const [postis, setPosti] = useState([]);
 
-  const limit = posts.length;
+  const limit = posts.length + postis.length;
 
   // setting up useNavigate
   const navigat = useNavigate();
