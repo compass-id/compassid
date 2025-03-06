@@ -14,8 +14,6 @@ const PostList = () => {
   const [lang, setLang] = useState("id");
   const [postis, setPosti] = useState([]);
 
-  const limit = posts.length + postis.length;
-
   // setting up useNavigate
   const navigat = useNavigate();
 
@@ -145,9 +143,6 @@ const PostList = () => {
               placeholder="Search posts..."
             />
           </div>
-          <p style={{ fontSize: "11pt", float: "left", display: "block" }}>
-            Result: {limit} Posts
-          </p>
         </div>
         <div className="section lang">
           <span>Select Language:</span>
