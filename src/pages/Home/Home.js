@@ -373,11 +373,7 @@ function Home() {
             <h5 style={{ float: "left" }}>Latest Posts</h5>
             <button
               type="button"
-              onClick={() =>
-                window.open(
-                  "https://compasspubindonesia.com/blogs/category/id/"
-                )
-              }
+              onClick={() => navigate("/posts")}
               style={{
                 borderRadius: "10px",
                 background: "transparent",
