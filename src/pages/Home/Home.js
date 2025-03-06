@@ -5,14 +5,11 @@ import { Helmet } from "react-helmet";
 
 function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
-  const [post, setPost] = useState([]);
-  const [posti, setPosti] = useState([]);
+  const [postis, setPosti] = useState([]);
   const [event, setEvent] = useState([]);
   const [books, setBook] = useState([]);
   const [lang, setLang] = useState("id");
   const events = event.slice(0, 3);
-  const posts = post.slice(0, 6);
-  const postis = posti.slice(0, 6);
 
   const navigat = useNavigate();
 
@@ -26,25 +23,6 @@ function Home() {
 
   useEffect(() => {
     setCurrentTime(new Date());
-
-    const getpost = async () => {
-      let url = "";
-      lang === "en"
-        ? (url = `https://seg-server.vercel.app/api/posts/en`)
-        : (url = `https://seg-server.vercel.app/api/posts/id`);
-      lang === "id"
-        ? (url = `https://seg-server.vercel.app/api/posts/id`)
-        : (url = `https://seg-server.vercel.app/api/posts/en`);
-      try {
-        const datas = await axios.get(url);
-
-        setPost(datas.data);
-      } catch (error) {
-        window.alert(error.message);
-      }
-    };
-
-    getpost();
 
     const getpostis = async () => {
       let url = "https://compasspubindonesia.com/blogs/get-post.php";
@@ -423,60 +401,39 @@ function Home() {
           <div className="scrollList">
             {postis.map((item, index) =>
               item.slugs === lang ? (
-                <>
-                  <div
-                    onClick={() =>
-                      item._id
-                        ? handleClick(item._id)
-                        : window.open(item.url, "_self")
-                    }
-                    key={index}
-                    className="panel"
-                  >
-                    <img loading="lazy" src={item.banner} alt={item.banner} />
-                    <h3>{item.title.toUpperCase()}</h3>
-                    <pre
-                      className="dip dipo"
-                      dangerouslySetInnerHTML={{ __html: item.body }}
-                    />
-                    <button
-                      type="button"
-                      onClick={() => handleClick(item._id)}
-                      className="btn"
+                index >= 18 ? (
+                  <></>
+                ) : (
+                  <>
+                    <div
+                      onClick={() =>
+                        item._id
+                          ? handleClick(item._id)
+                          : window.open(item.url, "_self")
+                      }
+                      key={index}
+                      className="panel"
                     >
-                      Read This post
-                    </button>
-                  </div>
-                </>
+                      <img loading="lazy" src={item.banner} alt={item.banner} />
+                      <h3>{item.title.toUpperCase()}</h3>
+                      <pre
+                        className="dip dipo"
+                        dangerouslySetInnerHTML={{ __html: item.body }}
+                      />
+                      <button
+                        type="button"
+                        onClick={() => handleClick(item._id)}
+                        className="btn"
+                      >
+                        Read This post
+                      </button>
+                    </div>
+                  </>
+                )
               ) : (
                 <></>
               )
             )}
-            {posts.map((item, index) => (
-              <div
-                onClick={() =>
-                  item._id
-                    ? handleClick(item._id)
-                    : window.open(item.url, "_self")
-                }
-                key={index}
-                className="panel"
-              >
-                <img loading="lazy" src={item.banner} alt={item.banner} />
-                <h3>{item.title.toUpperCase()}</h3>
-                <pre
-                  className="dip dipo"
-                  dangerouslySetInnerHTML={{ __html: item.body }}
-                />
-                <button
-                  type="button"
-                  onClick={() => handleClick(item._id)}
-                  className="btn"
-                >
-                  Read This post
-                </button>
-              </div>
-            ))}
           </div>
         </div>
 
