@@ -12,6 +12,7 @@ const PostList = () => {
   const [isLoading, setIsLoading] = useState(true); // state for loading
   const [isEmpty, setIsEmpty] = useState(false);
   const [lang, setLang] = useState("id");
+  const [postis, setPosti] = useState([]);
 
   const limit = posts.length;
 
@@ -71,6 +72,20 @@ const PostList = () => {
     };
 
     getposts();
+
+    const getpostis = async () => {
+      let url = "https://compasspubindonesia.com/blogs/get-post.php";
+
+      try {
+        const datas = await axios.post(url);
+
+        setPosti(datas.data);
+      } catch (error) {
+        window.alert(error.message);
+      }
+    };
+
+    getpostis();
   }, [search, lang]); // dependency array with only `getposts`
 
   const langSet = (a, b) => {
@@ -156,6 +171,59 @@ const PostList = () => {
           // display table after loading
 
           <>
+            {postis.map((post, index) =>
+              post.slugs === lang &&
+              post.title.toLowerCase().includes(search) &&
+              post.body.toLowerCase().includes(search) ? (
+                <>
+                  <div
+                    onClick={() => handleClick(post._id)}
+                    className="event"
+                    key={index}
+                  >
+                    {post.banner !== "" ? (
+                      <>
+                        <img
+                          loading="lazy"
+                          src={post.banner}
+                          alt={post.banner}
+                        />
+                      </>
+                    ) : (
+                      <></>
+                    )}
+
+                    <div className="section caption">
+                      {post.title !== "" ? (
+                        <>
+                          <h3 title={post.title}>{post.title.toUpperCase()}</h3>
+                        </>
+                      ) : (
+                        <></>
+                      )}
+
+                      <pre
+                        className="dip"
+                        dangerouslySetInnerHTML={{ __html: post.body }}
+                      />
+
+                      <button
+                        onClick={() =>
+                          post._id
+                            ? handleClick(post._id)
+                            : window.open(post.url, "_self")
+                        }
+                        className="btn"
+                      >
+                        Read This post
+                      </button>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <></>
+              )
+            )}
             {posts.map((post, index) => (
               <div
                 onClick={() => handleClick(post._id)}

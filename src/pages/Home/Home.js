@@ -6,11 +6,13 @@ import { Helmet } from "react-helmet";
 function Home() {
   const [currentTime, setCurrentTime] = useState(new Date());
   const [post, setPost] = useState([]);
+  const [posti, setPosti] = useState([]);
   const [event, setEvent] = useState([]);
   const [books, setBook] = useState([]);
   const [lang, setLang] = useState("id");
-  const posts = post.slice(0, 6);
   const events = event.slice(0, 3);
+  const posts = post.slice(0, 6);
+  const postis = posti.slice(0, 6);
 
   const navigat = useNavigate();
 
@@ -43,6 +45,20 @@ function Home() {
     };
 
     getpost();
+
+    const getpostis = async () => {
+      let url = "https://compasspubindonesia.com/blogs/get-post.php";
+
+      try {
+        const datas = await axios.post(url);
+
+        setPosti(datas.data);
+      } catch (error) {
+        window.alert(error.message);
+      }
+    };
+
+    getpostis();
 
     const getevent = async () => {
       let url = `https://seg-server.vercel.app/api/events`;
@@ -405,9 +421,44 @@ function Home() {
           </div>
 
           <div className="scrollList">
+            {postis.map((item, index) =>
+              item.slugs === lang ? (
+                <>
+                  <div
+                    onClick={() =>
+                      item._id
+                        ? handleClick(item._id)
+                        : window.open(item.url, "_self")
+                    }
+                    key={index}
+                    className="panel"
+                  >
+                    <img loading="lazy" src={item.banner} alt={item.banner} />
+                    <h3>{item.title.toUpperCase()}</h3>
+                    <pre
+                      className="dip dipo"
+                      dangerouslySetInnerHTML={{ __html: item.body }}
+                    />
+                    <button
+                      type="button"
+                      onClick={() => handleClick(item._id)}
+                      className="btn"
+                    >
+                      Read This post
+                    </button>
+                  </div>
+                </>
+              ) : (
+                <></>
+              )
+            )}
             {posts.map((item, index) => (
               <div
-                onClick={() => handleClick(item._id)}
+                onClick={() =>
+                  item._id
+                    ? handleClick(item._id)
+                    : window.open(item.url, "_self")
+                }
                 key={index}
                 className="panel"
               >
