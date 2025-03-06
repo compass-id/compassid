@@ -1,0 +1,1931 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;800&family=VT323&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: auto;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  background: transparent;
+}
+
+pre {
+  white-space: break-spaces;
+}
+
+#fab {
+  width: auto;
+  height: auto;
+  display: block;
+  overflow: hidden;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  border: 1px solid #111;
+  padding: 10px 15px;
+  background: #eee;
+  color: #111;
+  font-size: 10pt;
+  border-radius: 10px;
+}
+
+#fab span {
+  margin-right: 10px;
+}
+
+#fab.active {
+  background: #eee;
+  color: #111;
+}
+
+a,
+button {
+  cursor: pointer;
+  text-transform: uppercase;
+  border: 1px hidden;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 1.8em;
+}
+
+h2 {
+  font-size: 1.65em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  font-size: 1.35em;
+}
+
+h5 {
+  font-size: 1.2em;
+}
+
+h6 {
+  font-size: 1em;
+}
+
+p {
+  font-size: 1em;
+}
+
+pre {
+  font-size: 1em;
+}
+
+body {
+  background: #fff;
+  color: #111;
+}
+
+.shdw {
+  -webkit-box-shadow:
+    0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 4px 5px 0 rgba(0, 0, 0, 0.14),
+    0 1px 10px 0 rgba(0, 0, 0, 0.12),
+    0 2px 4px -1px rgba(0, 0, 0, 0.3);
+}
+
+#images.active {
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a,
+p,
+pre,
+label {
+  margin: 5px auto;
+}
+
+#peg {
+  display: none;
+}
+
+.btni {
+  width: 100%;
+  display: inline-block;
+  margin: 1rem auto;
+  padding: 10px 25px;
+  border: 1px hidden;
+  border-radius: 10px;
+  background: #111;
+  color: #fff;
+}
+
+.btni:hover {
+  background: #004;
+}
+
+.posts pre {
+  font-size: 1em;
+}
+
+.lang button {
+  width: auto;
+  height: auto;
+  display: inline-block;
+  overflow: hidden;
+  background: #eee;
+  color: #111;
+  margin: auto;
+  margin-left: 8px;
+  border-radius: 5px;
+  padding: 2px 10px;
+}
+
+.lang button.active {
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+}
+
+@media only screen and (min-width: 601px) {
+  .loading,
+  .empty {
+    width: 100%;
+    height: 250px;
+    display: block;
+    overflow: hidden;
+  }
+
+  #desktop-about {
+    display: block;
+  }
+
+  #mobile-about {
+    display: none;
+  }
+
+  .post .scrollList {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .post .panel {
+    width: 31.5%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #111;
+    border-radius: 10px;
+    margin: 1rem 0.5rem;
+  }
+
+  .post .panel img {
+    width: 100%;
+    height: 150px;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 1px solid #111;
+  }
+
+  .post .panel h3,
+  .post .panel p {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 5px 1rem;
+    text-overflow: ellipsis;
+  }
+
+  .post .panel h3,
+  .post .panel h1 {
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+
+  .post .panel .btn,
+  .post .scrollList .btn {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding: 12px 1px;
+    margin: 1rem auto;
+    background: #111;
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 2rem;
+  }
+
+  .post .scrollList .btn:hover {
+    background: #004;
+  }
+
+  .post .scrollList .dip {
+    width: 90%;
+    height: 65px;
+    display: block;
+    overflow: hidden;
+    text-overflow: inherit;
+    white-space: initial;
+    font-size: 10pt;
+    color: #666;
+  }
+
+  .posts,
+  .posts .film,
+  .posts .film .panel,
+  .posts .film img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .posts .film img {
+    height: 350px;
+    border: 1px solid #111;
+    margin: 10px auto;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .posts .film .panel {
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+
+  .posts .film .panel img {
+    width: 5%;
+    height: 50px;
+    display: inline-block;
+    margin: 10px 5px;
+    vertical-align: top;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .posts .film .panel img:hover {
+    border: 5px solid #111;
+  }
+
+  #peg {
+    display: none;
+    font-size: 0.8em;
+    border: 1px solid #111;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+  }
+
+  #peg .section {
+    padding: 5px 0px;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    width: auto;
+    padding: 16px;
+    color: #111;
+    border: 1px solid #111;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    margin-top: 350px;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    color: #fff;
+    background: #111;
+  }
+
+  .left pre {
+    margin: 10px auto;
+  }
+
+  p {
+    margin: 15px auto;
+  }
+
+  .section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .container {
+    width: 75%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .navbar {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 997;
+    background: #fff;
+    clear: both;
+    border-bottom: 2px solid #ddd;
+  }
+
+  .navbar .logo {
+    width: 115px;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin: 10px 10px;
+  }
+
+  .navbar .taba {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-align: center;
+    margin: 10px 10px;
+  }
+
+  .navbar .tabi {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    float: right;
+    margin: 10px 10px;
+  }
+
+  .navbar .tabs {
+    display: none;
+  }
+
+  .navbar button {
+    width: auto;
+    height: auto;
+    background: transparent;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+  }
+
+  .navbar .logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .navbar .taba button,
+  .navbar .tabi button {
+    display: inline-block;
+    margin: auto 5px;
+    padding: 0.5rem 1rem;
+    font-size: 0.9em;
+  }
+
+  .navbar .taba button i,
+  .navbar .tabi button i {
+    margin-right: 10px;
+  }
+
+  .navbar .taba button {
+    font-weight: 500;
+    font-size: 12pt;
+    color: #666;
+  }
+
+  .navbar .tabi button {
+    background: #111;
+    color: #fff;
+    border-radius: 10px;
+    margin-right: 2rem;
+    border: 1px solid #111;
+  }
+
+  .navbar .taba button:hover {
+    font-weight: 600;
+    color: #111;
+  }
+
+  #sidenav {
+    display: none;
+  }
+
+  .main-page {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 2.5rem;
+    overflow: hidden;
+  }
+
+  .banner {
+    width: 100%;
+    height: 425px;
+    display: block;
+    overflow: hidden;
+    background: #111;
+    padding: 0;
+    border-bottom: 2px solid #ccc;
+    margin-top: 3.7rem;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 425px;
+    display: none;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .headline {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #111;
+    clear: both;
+  }
+
+  .headline h4,
+  .headline h5,
+  .headline p {
+    display: inline-block;
+    font-size: 1.5em;
+  }
+
+  .headline p {
+    border: 1px hidden;
+    margin: auto 1rem;
+    float: right;
+  }
+
+  .headline .btn {
+    float: right;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    padding: 8px 40px;
+    font-weight: 600;
+    background: #111;
+    border: 1px solid #111;
+  }
+
+  .headline .btn:hover {
+    background: #004;
+  }
+
+  .headline input[type="text"] {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+    margin: 10px auto;
+    background: #fff;
+    color: #111;
+    border: 2px solid #111;
+    border-radius: 30px;
+  }
+
+  .form {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .form .field {
+    display: inline-block;
+    overflow: hidden;
+    width: 50%;
+    height: auto;
+    padding: 1rem;
+  }
+
+  .form .field-half,
+  .form .controls {
+    display: block;
+    overflow: hidden;
+  }
+
+  .form .field input[type="text"],
+  .form .field input[type="number"],
+  .form .field input[type="date"],
+  .form .field input[type="password"],
+  .form .field input[type="datetime-local"],
+  .form .field input[type="file"],
+  .form .field textarea,
+  .form .field select,
+  .form .field-half select {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+    margin: 10px auto;
+    background: #fff;
+    color: #111;
+    border: 1px solid #111;
+    border-radius: 10px;
+  }
+
+  .form .controls {
+    text-align: right;
+    padding: 1rem 1rem;
+  }
+
+  .form .controls button {
+    display: inline-block;
+    margin: 1rem auto;
+    margin-left: 1rem;
+    padding: 10px 35px;
+    border: 1px hidden;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+  }
+
+  .form .controls button:hover {
+    background: #004;
+    color: #fff;
+  }
+
+  .event {
+    width: 31%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #111;
+    margin: 10px 10px;
+    border-radius: 15px;
+  }
+
+  .event img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-bottom: 1px solid;
+  }
+
+  .event .caption {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+  .event .caption h3,
+  .event .caption h4,
+  .event .caption h6,
+  .event .caption p,
+  .event .caption label {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 5px auto;
+  }
+
+  .event .btn {
+    width: 95%;
+    height: auto;
+    display: block;
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+    padding: 10px 1px;
+    border: 1px hidden;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .event .btn:hover {
+    background: #004;
+  }
+
+  .event .btn:nth-child(even) {
+    margin-right: 5px;
+  }
+
+  .event .btn:nth-child(odd) {
+    margin-left: 5px;
+  }
+
+  .event .caption .dip {
+    width: 100%;
+    height: 100px;
+    display: block;
+    overflow: hidden;
+    text-overflow: initial;
+    white-space: initial;
+    font-size: 10pt;
+    color: #666;
+  }
+
+  .party .section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .party p,
+  .party pre {
+    margin: 5px auto;
+  }
+
+  .party pre {
+    max-height: 100px;
+    overflow-y: scroll;
+  }
+
+  .party .left {
+    width: 30%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    float: left;
+    border: 1px hidden;
+  }
+
+  .party .right {
+    width: 65%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    float: right;
+    border-left: 1px solid #111;
+    padding: 15px 2rem;
+  }
+
+  .party .left img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .party .right .field {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .recom .scrollList {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: transparent transparent;
+  }
+
+  .recom .scrollList .axe {
+    width: 15%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: auto 5px;
+    scroll-snap-align: start;
+  }
+
+  .recom .scrollList .axe p {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 5px auto auto 2px;
+    color: #777;
+    font-size: 9pt;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .recom .scrollList .axe strong {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 10px;
+    display: block;
+    color: #111;
+    font-size: 12pt;
+    text-transform: uppercase;
+  }
+
+  .recom .scrollList .axe img {
+    width: 100%;
+    height: 14.5em;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  }
+
+  .partner .thumb img {
+    width: 15%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px 5px;
+  }
+
+  .partner .thumb {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .icons button {
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .icons button i,
+  .icons button label {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 5px auto;
+  }
+
+  .icons button i {
+    font-size: 20pt;
+  }
+
+  .icons button span {
+    width: 60px;
+    height: auto;
+    overflow: hidden;
+    display: inline-block;
+    background: #eee;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+
+  .icons {
+    display: none;
+  }
+
+  .footer {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: #111;
+    text-align: center;
+  }
+
+  .footer a {
+    width: 5%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    margin: auto;
+    padding: 10px;
+  }
+
+  .footer a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .footer p {
+    color: #fff;
+  }
+
+  .footer .section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .posts pre {
+    height: auto;
+    overflow: hidden;
+  }
+
+  .posts .section {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .bog:nth-child(odd) {
+    width: 45%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 3rem 4rem auto auto;
+    clear: both;
+  }
+
+  .bog:nth-child(even) {
+    width: 45%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 3rem auto auto auto;
+    clear: both;
+  }
+
+  .bog .cover {
+    width: 25%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+
+  .bog .caption {
+    width: 75%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding: 0px 15px;
+  }
+
+  .bog .cover,
+  .bog .caption {
+    margin-bottom: 2rem;
+  }
+
+  .bog .cover img {
+    width: 100%;
+    height: 150px;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .bog .caption h3,
+  .bog .caption p {
+    margin: auto;
+  }
+
+  .bog .caption h3 {
+    text-transform: uppercase;
+    font-size: 15pt;
+    margin: auto auto 5px auto;
+  }
+
+  .bog .caption p {
+    font-size: 10pt;
+    margin: 5px auto;
+    color: #777;
+  }
+
+  .bog .caption .btn {
+    background: #111;
+    color: #fff;
+    padding: 5px 20px;
+    margin: 20px auto auto auto;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  .boog {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+  .boog .image {
+    width: 25%;
+    height: auto;
+    overflow: hidden;
+    display: inline-block;
+    margin: 1rem auto;
+    vertical-align: top;
+  }
+
+  .boog .caption {
+    width: 75%;
+    height: auto;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    padding: 1rem 2rem;
+  }
+
+  .boog .image img {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+  .boog .caption h1 {
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .boog .caption p {
+    padding: 1rem 0;
+    border-bottom: 1px solid #111;
+  }
+
+  .boog .caption .btn {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 15px 3rem;
+    border: 1px hidden;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    width: auto;
+    height: auto;
+    font-weight: bold;
+  }
+
+  .about {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 5px 10px;
+    font-size: 11pt;
+  }
+
+  .thub {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 5px 10px;
+    font-size: 11pt;
+    margin: 1.5rem auto;
+    text-align: center;
+  }
+
+  .thub div {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 2rem 0.5rem;
+    border: 1px solid #000;
+    border-radius: 20px;
+  }
+
+  .thub div img {
+    width: 100%;
+  }
+
+  .thub div p {
+    margin: 1rem auto;
+    font-size: 11pt;
+    font-weight: bold;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .loading,
+  .empty {
+    width: 100%;
+    height: 400px;
+    display: block;
+    overflow: hidden;
+  }
+
+  #desktop-about {
+    display: none;
+  }
+
+  #mobile-about,
+  #about-lang {
+    display: block;
+  }
+
+  .post .panel {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #111;
+    border-radius: 10px;
+    margin: auto;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .post .panel img {
+    width: 100%;
+    height: 150px;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 1px solid #111;
+  }
+
+  .post .panel h3,
+  .post .panel p {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 5px 1rem;
+    text-overflow: ellipsis;
+  }
+
+  .post .panel h3 {
+    margin-top: 1rem;
+    text-transform: uppercase;
+  }
+
+  .post .panel p {
+    font-size: 10pt;
+  }
+
+  .post .panel .btn {
+    width: 95%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding: 10px;
+    margin: 1rem auto;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    border-radius: 10px;
+    margin-top: 1.5rem;
+    font-weight: 600;
+  }
+
+  .posts,
+  .posts .film,
+  .posts .film .panel,
+  .posts .film img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .posts .film img {
+    border: 1px solid #111;
+    margin: 10px auto;
+  }
+
+  .posts .film .panel {
+    white-space: nowrap;
+    overflow-x: scroll;
+  }
+
+  .posts .film .panel img:hover {
+    border: 5px solid #111;
+  }
+
+  .posts .film .panel img {
+    width: 15%;
+    height: 50px;
+    display: inline-block;
+    margin: 10px 5px;
+    vertical-align: top;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .post .scrollList .btn {
+    width: 90%;
+    padding: 10px;
+  }
+
+  .post .scrollList .btn:hover {
+    background: #004;
+  }
+
+  .post .scrollList .dip {
+    width: 90%;
+    height: 65px;
+    display: block;
+    overflow: hidden;
+    text-overflow: initial;
+    white-space: initial;
+    font-size: 10pt;
+    color: #666;
+  }
+
+  #peg {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 1rem;
+    border: 1px solid #111;
+  }
+
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 18%;
+    width: auto;
+    padding: 10px;
+    color: #111;
+    border: 1px solid #111;
+    font-weight: 600;
+    font-size: 0.5em;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover,
+  .next:hover {
+    background: #004;
+    color: #fff;
+  }
+
+  pre {
+    margin: 10px auto;
+    white-space: pre-wrap;
+    font-size: 0.9em;
+  }
+
+  p {
+    margin: 15px auto;
+  }
+
+  .section {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .container {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: auto;
+  }
+
+  .navbar {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 997;
+    background: #fff;
+    clear: both;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .navbar .logo {
+    width: 110px;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    float: left;
+    margin: 10px 0;
+  }
+
+  .navbar .taba {
+    display: none;
+  }
+
+  .navbar .tabs,
+  .navbar .tabi {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    float: right;
+    margin: 10px auto;
+  }
+
+  .navbar .tabs {
+    margin-right: 0.5rem;
+  }
+
+  .navbar button {
+    width: auto;
+    height: auto;
+    background: transparent;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    font-weight: 600;
+  }
+
+  .navbar .logo img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .navbar .tabs button,
+  .navbar .tabi button {
+    margin: auto 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1em;
+    display: none;
+  }
+
+  .navbar .tabi button span {
+    display: none;
+  }
+
+  .navbar .tabs button.menu,
+  .navbar .tabi button {
+    display: inline-block;
+    border: 1px solid #111;
+    border-radius: 10px;
+    padding: 8px 15px;
+    font-size: 1em;
+  }
+
+  .navbar .tabs button.menu {
+    background: #111;
+    color: #fff;
+  }
+
+  #sidenav.active {
+    display: block;
+  }
+
+  .sidenav-wrapper,
+  .sidenav-wrapper .plain {
+    width: 100%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .sidenav {
+    width: 60%;
+    height: 100vh;
+    display: block;
+    overflow: hidden;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    -webkit-box-shadow:
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12),
+      0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    box-shadow:
+      0 4px 5px 0 rgba(0, 0, 0, 0.14),
+      0 1px 10px 0 rgba(0, 0, 0, 0.12),
+      0 2px 4px -1px rgba(0, 0, 0, 0.3);
+    text-align: left;
+  }
+
+  .sidenav img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding: 1rem 2rem 1rem 1rem;
+  }
+
+  .sidenav .header {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #111;
+    font-weight: 600;
+    background: #111;
+    color: #fff;
+    text-align: left;
+  }
+
+  .sidenav button {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #111;
+    font-weight: 600;
+    text-align: left;
+  }
+
+  .sidenav button:hover {
+    background: #eee;
+  }
+
+  .sidenav i {
+    margin-right: 15px;
+    float: left;
+  }
+
+  #sidenav {
+    display: none;
+  }
+
+  .main-page {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 2.5rem;
+    overflow: hidden;
+  }
+
+  .banner {
+    width: 100%;
+    min-height: 160px;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin-top: 3.6rem;
+    background: #111;
+    padding: 0;
+    border-bottom: 2px solid #ccc;
+  }
+
+  .banner img {
+    width: 100%;
+    height: 160px;
+    display: none;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .headline {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #111;
+    clear: both;
+  }
+
+  .headline h4 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .headline button {
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0;
+    margin: 0;
+  }
+
+  .headline .btn {
+    float: right;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 10px;
+    padding: 8px 40px;
+    font-weight: 600;
+    background: #111;
+    border: 1px solid #111;
+  }
+
+  .headline .btn:hover {
+    background: #004;
+  }
+
+  .headline input[type="text"] {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+    margin: 10px auto;
+    background: #fff;
+    color: #111;
+    border: 1.5px solid #111;
+    border-radius: 30px;
+  }
+
+  .form {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .form .field {
+    display: block;
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+    margin: 1rem auto;
+  }
+
+  .form .field-half,
+  .form .controls {
+    display: block;
+    overflow: hidden;
+  }
+
+  .form .field input[type="text"],
+  .form .field input[type="number"],
+  .form .field input[type="date"],
+  .form .field input[type="file"],
+  .form .field input[type="password"],
+  .form .field input[type="datetime-local"],
+  .form .field textarea,
+  .form .field select,
+  .form .field-half select {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 10px 15px;
+    margin: 10px auto;
+    background: #fff;
+    color: #111;
+    border: 1px solid #111;
+    border-radius: 10px;
+  }
+
+  .form .controls {
+    text-align: center;
+  }
+
+  .form .controls button {
+    width: 44%;
+    display: inline-block;
+    margin: 10px 10px;
+    padding: 15px 15px;
+    border: 1px hidden;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+  }
+
+  .form .controls button:hover {
+    background: #004;
+    color: #fff;
+  }
+
+  .event {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #111;
+    border-radius: 15px;
+    margin: 2rem auto;
+  }
+
+  .event img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    border-bottom: 1px solid #111;
+  }
+
+  .event .caption {
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+  .event .caption h6,
+  .event .caption h3,
+  .event .caption h5,
+  .event .caption p,
+  .event .caption label {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 5px auto;
+  }
+
+  .event .btn {
+    display: block;
+    margin-top: 1.5rem;
+    margin-bottom: 0.5rem;
+    padding: 10px 10px;
+    border: 1px hidden;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    width: 100%;
+    float: left;
+    font-weight: bold;
+  }
+
+  .event .btn:hover {
+    background: #004;
+  }
+
+  .event .caption .dip {
+    width: 100%;
+    height: 95px;
+    display: block;
+    overflow: hidden;
+    text-overflow: initial;
+    white-space: initial;
+    font-size: 10pt;
+    color: #666;
+  }
+
+  .party .left {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .party p,
+  .party pre {
+    margin: 5px auto;
+  }
+
+  .party .left img {
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+  }
+
+  .party .right .field {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .recom .scrollList {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    white-space: nowrap;
+    scroll-snap-type: x mandatory;
+    scrollbar-color: transparent transparent;
+  }
+
+  .recom .scrollList .axe {
+    width: 29%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: auto;
+    scroll-snap-align: start;
+  }
+
+  .recom .scrollList .axe p {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin: 3px auto 2px auto;
+    color: #999;
+    font-size: 8pt;
+    text-transform: none;
+    text-align: left;
+  }
+
+  .recom .scrollList .axe strong {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 5px;
+    display: block;
+    color: #111;
+    text-transform: uppercase;
+    font-size: 9pt;
+  }
+
+  .recom .scrollList .axe img {
+    width: 100%;
+    height: 135px;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 1px solid #eee;
+  }
+
+  .partner .thumb img {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    margin: 5px 5px;
+  }
+
+  .partner .thumb {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .icons button {
+    width: 20%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-transform: capitalize;
+  }
+
+  .icons button i,
+  .icons button label {
+    width: auto;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 5px auto;
+  }
+
+  .icons button i {
+    font-size: 20pt;
+  }
+
+  .icons button span {
+    width: 60px;
+    height: auto;
+    overflow: hidden;
+    display: inline-block;
+    background: #eee;
+    padding: 10px 15px;
+    border-radius: 15px;
+  }
+
+  .footer {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    background: rgba(0, 0, 0, 0.8);
+    text-align: center;
+  }
+
+  .footer a {
+    width: 10%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    margin: auto 5px;
+    padding: 5px;
+  }
+
+  .footer a img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+  }
+
+  .footer p {
+    color: #fff;
+  }
+
+  .footer .section {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .forms button.btn {
+    width: 100%;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .posts .section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .bog {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #111;
+    clear: both;
+  }
+
+  .bog .cover {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+  }
+
+  .bog .caption {
+    width: 70%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: top;
+    padding: 0px 15px;
+  }
+
+  .bog .cover,
+  .bog .caption {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .bog .cover img {
+    width: 100%;
+    height: 150px;
+    display: block;
+    overflow: hidden;
+    border-radius: 10px;
+  }
+
+  .bog .caption h3,
+  .bog .caption p {
+    margin: auto;
+  }
+
+  .bog .caption h3 {
+    text-transform: uppercase;
+    font-size: 14pt;
+    margin: auto auto 5px auto;
+  }
+
+  .bog .caption p {
+    font-size: 10pt;
+    margin: 5px auto;
+    color: #777;
+  }
+
+  .bog .caption .btn {
+    background: #111;
+    color: #fff;
+    padding: 5px 20px;
+    margin: 10px auto auto auto;
+    border-radius: 5px;
+    font-weight: 600;
+  }
+
+  .boog {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+  .boog .image {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    margin: 1rem auto;
+  }
+
+  .boog .caption {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+  .boog .image img {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+  }
+
+  .boog .caption h1 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+  }
+
+  .boog .caption p {
+    padding: 1rem 0;
+    border-bottom: 1px solid #111;
+  }
+
+  .boog .caption .btn {
+    display: block;
+    margin-top: 2rem;
+    padding: 15px 1rem;
+    border: 1px hidden;
+    border-radius: 10px;
+    background: #111;
+    color: #fff;
+    width: 100%;
+    height: auto;
+    float: left;
+    font-weight: bold;
+  }
+
+  .thub {
+    display: block;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    padding: 5px 10px;
+    font-size: 11pt;
+    margin: 1.5rem auto;
+    text-align: center;
+  }
+
+  .thub div {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 2rem auto;
+    border-radius: 10px;
+    border: 1px solid #000;
+  }
+
+  .thub div img {
+    width: 100%;
+  }
+
+  .thub div p {
+    margin: 1rem auto;
+    font-size: 11pt;
+    font-weight: bold;
+  }
+}
+
+.psto a,
+.dip a {
+  text-transform: none !important;
+}
+
+.dipo a {
+  color: #111;
+}

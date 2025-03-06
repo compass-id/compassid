@@ -1,0 +1,302 @@
+@media only screen and (min-width: 601px) {
+  .tomo,
+  .tomo .cover,
+  .tomo .cover img,
+  .tomo .panel {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .tomo {
+    margin: auto auto 1rem auto;
+    border-bottom: 1px solid #999;
+  }
+
+  .tomo .cover img {
+    height: 180px;
+    object-fit: cover;
+    object-position: center;
+
+    border-bottom: 1px solid #999;
+  }
+
+  .tomo .hero .pic {
+    width: 60px;
+    height: 60px;
+    display: inline-block;
+    overflow: hidden;
+    clear: both;
+    background: #fff;
+    border: 1px double #111;
+    border-radius: 50%;
+    margin: 1rem 1rem;
+    vertical-align: middle;
+  }
+
+  .tomo .hero .pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .tomo .hero .label {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .tomo .hero .label a,
+  .tomo .hero .label p {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 2px auto;
+  }
+
+  .tomo .hero .label a {
+    text-transform: capitalize;
+    font-size: 16pt;
+    font-weight: bold;
+    text-decoration: none;
+    color: #111;
+  }
+
+  .tomo .hero .label p {
+    font-size: 10pt;
+    font-weight: inherit;
+    color: #666;
+  }
+
+  .tomo .panel {
+    text-align: center;
+    border-top: 1px solid #999;
+  }
+
+  .tomo .panel a {
+    width: 32%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    clear: both;
+    text-align: center;
+    color: #111;
+    padding: 5px 10px;
+    margin: 5px auto;
+    text-decoration: none;
+    font-size: 9pt;
+  }
+
+  .mid .form {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding: 15px 45px;
+    text-align: left;
+  }
+
+  .mid .form p {
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 2rem auto;
+  }
+
+  .mid .form label {
+    font-size: 10pt;
+  }
+
+  .mid .form label,
+  .mid .form button,
+  .mid .form a,
+  .mid .form select,
+  .mid .form input {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 15px auto;
+    border-radius: 30px;
+  }
+
+  .mid .form input,
+  .mid .form select {
+    padding: 10px 15px;
+    border: 1px solid #999;
+  }
+
+  .mid .form button,
+  .mid .form a {
+    margin: 1.5rem auto 4rem auto;
+    padding: 10px 15px;
+    background: blue;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10pt;
+  }
+
+  .mid .form a {
+    background: #111;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .tomo,
+  .tomo .cover,
+  .tomo .cover img,
+  .tomo .panel {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .tomo {
+    margin: auto auto 1rem auto;
+    border-bottom: 1px solid #999;
+  }
+
+  .tomo .cover img {
+    height: 120px;
+    object-fit: cover;
+    object-position: center;
+    border-bottom: 1px solid #999;
+  }
+
+  .tomo .hero .pic {
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    overflow: hidden;
+    clear: both;
+    background: #fff;
+    border: 1px double #111;
+    border-radius: 50%;
+    margin: 1rem 1rem;
+    vertical-align: middle;
+  }
+
+  .tomo .hero .pic img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .tomo .hero .label {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .tomo .hero .label a,
+  .tomo .hero .label p {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 2px auto;
+  }
+
+  .tomo .hero .label a {
+    text-transform: capitalize;
+    font-size: 14pt;
+    font-weight: bold;
+    text-decoration: none;
+    color: #111;
+  }
+
+  .tomo .hero .label p {
+    font-size: 8pt;
+    font-weight: inherit;
+    color: #666;
+  }
+
+  .tomo .panel {
+    text-align: center;
+    border-top: 1px solid #999;
+  }
+
+  .tomo .panel a {
+    width: 32%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    clear: both;
+    text-align: center;
+    color: #111;
+    padding: 5px 10px;
+    margin: 5px auto;
+    text-decoration: none;
+    font-size: 8pt;
+  }
+
+  .mid .form {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    padding: 15px 20px;
+    text-align: left;
+  }
+
+  .mid .form p {
+    font-size: 16pt;
+    font-weight: bold;
+    margin: 2rem auto;
+  }
+
+  .mid .form label {
+    font-size: 10pt;
+  }
+
+  .mid .form label,
+  .mid .form button,
+  .mid .form a,
+  .mid .form select,
+  .mid .form input {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 15px auto;
+    border-radius: 30px;
+  }
+
+  .mid .form input,
+  .mid .form select {
+    padding: 10px 15px;
+    border: 1px solid #999;
+  }
+
+  .mid .form button,
+  .mid .form a {
+    margin: 1.5rem auto 4rem auto;
+    padding: 10px 15px;
+    background: blue;
+    color: #fff;
+    text-align: center;
+    text-decoration: none;
+    font-size: 10pt;
+  }
+
+  .mid .form a {
+    background: #111;
+  }
+}

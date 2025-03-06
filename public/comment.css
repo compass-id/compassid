@@ -1,0 +1,665 @@
+@media only screen and (min-width: 601px) {
+  .mid {
+    width: 49%;
+    height: 100vh;
+    display: inline-block;
+    overflow: hidden;
+    overflow-y: scroll;
+    vertical-align: top;
+  }
+
+  .makedt {
+    display: none;
+  }
+
+  .maked {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-bottom: 1px solid #999;
+    position: sticky;
+    bottom: 0;
+    background: #fff;
+  }
+
+  .maked textarea {
+    width: 100%;
+    height: 100px;
+    display: block;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 10px 10px;
+    margin: 5px auto;
+    border: 1px solid #999;
+  }
+
+  .maked input[type="file"] {
+    width: 70%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #999;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px auto;
+  }
+
+  .maked input[type="submit"] {
+    width: 29%;
+    background: blue;
+    color: #fff;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+  }
+
+  .maked input[type="submit"]:hover {
+    background: blue;
+  }
+
+  .mid .posted,
+  .mid .posted .post,
+  .mid .posted .post .content,
+  .mid .posted .post .content pre {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .mid .posted {
+    margin: auto auto;
+  }
+
+  .mid .posted .post {
+    margin: auto auto 1rem auto;
+    border: 1px solid #999;
+  }
+
+  .mid .posted .post .fig {
+    border-bottom: 1px solid #999;
+    padding: 10px 0;
+    position: relative;
+  }
+
+  .mid .posted .post .fig a.fol,
+  .mid .posted .post .fig a.ufol {
+    display: inline-block;
+    width: 80px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #999;
+    padding: 5px 10px;
+    font-weight: initial;
+    border-radius: 5px;
+    font-size: 8pt;
+    color: #fff;
+    background: blue;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin: 10px 15px;
+  }
+
+  .mid .posted .post .fig a.ufol {
+    background: #111;
+  }
+
+  .mid .posted .post .image {
+    width: 10%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    text-align: center;
+  }
+
+  .mid .posted .post .image img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    overflow: hidden;
+    border: 1px double #999;
+    border-radius: 50%;
+    margin: 5px auto;
+  }
+
+  .mid .posted .post .label {
+    width: 78%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .mid .posted .post .label a,
+  .mid .posted .post .label p {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 2px auto;
+  }
+
+  .mid .posted .post .label a {
+    text-transform: capitalize;
+    font-size: 11pt;
+    text-decoration: none;
+    font-weight: bold;
+    color: #111;
+  }
+
+  .mid .posted .post .label p {
+    font-size: 8pt;
+    font-weight: inherit;
+    color: #666;
+  }
+
+  .mid .posted .post .content pre {
+    margin: 10px auto;
+    padding: 0.5rem 1rem 6px 10px;
+  }
+
+  .mid .posted .post .content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #999;
+  }
+
+  .mid .posted .post .panel,
+  .mid .posted .post .cnt {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    text-align: left;
+  }
+
+  .mid .posted .post .cnt {
+    border-bottom: 1px solid #999;
+  }
+
+  .mid .posted .post .cnt p {
+    display: inline-block;
+    margin: 10px 15px;
+    font-size: 8pt;
+  }
+
+  .mid .posted .post .panel a {
+    width: 19%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    color: #111;
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 10px 10px;
+    font-size: 10pt;
+  }
+
+  .mid .posted .post .panel a i {
+    margin-right: 10px;
+  }
+
+  .mid .posted .post .panel a.active {
+    color: blue;
+    font-weight: bold;
+  }
+
+  .mid .comment {
+    width: 100%;
+    height: auto;
+    min-height: 50vh;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    margin: auto;
+  }
+
+  .mid .comment label {
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+    font-size: 10pt;
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+    padding: 10px 15px;
+  }
+
+  .mid .comment .cmnt {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    margin: 1.5rem auto;
+    text-align: left;
+    border-bottom: 1px solid #999;
+  }
+
+  .mid .comment .cmnt .fig .image {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: auto 5px auto 10px;
+  }
+
+  .mid .comment .cmnt .fig .image img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    overflow: hidden;
+    border: 1px double #999;
+    border-radius: 50%;
+    margin: 5px auto;
+  }
+
+  .mid .comment .cmnt .fig .label {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .mid .comment .cmnt .fig .label a,
+  .mid .comment .cmnt .fig .label p {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 2px auto;
+  }
+
+  .mid .comment .cmnt .fig .label a {
+    text-transform: capitalize;
+    font-size: 11pt;
+    text-decoration: none;
+    font-weight: bold;
+    color: #111;
+  }
+
+  .mid .comment .cmnt .fig .label p {
+    font-size: 8pt;
+    font-weight: inherit;
+    color: #666;
+  }
+
+  .mid .comment .cmnt .content pre {
+    max-width: 70%;
+    display: block;
+    margin: 10px 0;
+    padding: 5px 10px 5px 10px;
+  }
+
+  .mid .comment .cmnt .content img {
+    width: auto;
+    max-width: 30%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #999;
+    margin: 10px 10px;
+  }
+
+  .mid .comment .cmnt .tip {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .mid .comment .cmnt .tip a {
+    font-size: 8pt;
+    font-weight: bold;
+    margin: 10px 10px;
+    display: inline-block;
+    text-decoration: underline;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .maked {
+    display: none;
+  }
+
+  .makedt {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border-top: 1px solid #999;
+    position: sticky;
+    bottom: 3rem;
+    background: #fff;
+  }
+
+  .makedt textarea {
+    width: 98%;
+    height: 60px;
+    display: block;
+    overflow: hidden;
+    overflow-y: scroll;
+    padding: 10px 10px;
+    margin: 5px auto;
+    border: 1px solid #999;
+  }
+
+  .makedt input[type="file"] {
+    width: 60%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #999;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin: 5px 10px;
+    vertical-align: middle;
+  }
+
+  .makedt input[type="submit"] {
+    width: 29%;
+    background: blue;
+    color: #fff;
+    padding: 8px 10px;
+    border: 1px solid #999;
+    border-radius: 5px;
+  }
+
+  .makedt input[type="submit"]:hover {
+    background: blue;
+  }
+
+  .mid .posted,
+  .mid .posted .post,
+  .mid .posted .post .content,
+  .mid .posted .post .content pre {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+  }
+
+  .mid .posted {
+    margin-top: 5px;
+  }
+
+  .mid .posted .post {
+    margin: auto auto 5px auto;
+    border: 1px solid #999;
+  }
+
+  .mid .posted .post .fig {
+    border-bottom: 1px solid #999;
+    padding: 10px 0;
+    position: relative;
+    clear: both;
+  }
+
+  .mid .posted .post .fig a.fol,
+  .mid .posted .post .fig a.ufol {
+    display: inline-block;
+    width: 80px;
+    height: auto;
+    overflow: hidden;
+    border: 1px solid #999;
+    padding: 5px 10px;
+    font-weight: initial;
+    border-radius: 5px;
+    font-size: 8pt;
+    color: #fff;
+    background: blue;
+    text-decoration: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    text-align: center;
+    margin: 10px 10px;
+  }
+
+  .mid .posted .post .fig a.ufol {
+    background: #111;
+  }
+
+  .mid .posted .post .fig .image {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: auto 5px auto 10px;
+  }
+
+  .mid .posted .post .image img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    overflow: hidden;
+    border: 1px double #999;
+    border-radius: 50%;
+    margin: 5px auto;
+  }
+
+  .mid .posted .post .label {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .mid .posted .post .label a,
+  .mid .posted .post .label p {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 2px auto;
+  }
+
+  .mid .posted .post .label a {
+    text-transform: capitalize;
+    font-size: 11pt;
+    text-decoration: none;
+    font-weight: bold;
+    color: #111;
+  }
+
+  .mid .posted .post .label p {
+    font-size: 8pt;
+    font-weight: inherit;
+    color: #666;
+  }
+
+  .mid .posted .post .content pre {
+    margin: 10px auto;
+    padding: 0.5rem 15px 5px 15px;
+  }
+
+  .mid .posted .post .content img {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #999;
+  }
+
+  .mid .posted .post .panel,
+  .mid .posted .post .cnt {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    text-align: left;
+  }
+
+  .mid .posted .post .cnt {
+    border-bottom: 1px solid #999;
+  }
+
+  .mid .posted .post .cnt p {
+    display: inline-block;
+    margin: 10px 15px;
+    font-size: 8pt;
+  }
+
+  .mid .posted .post .panel a {
+    width: 24%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    text-decoration: none;
+    text-align: center;
+    color: #111;
+    margin: 10px auto;
+    border-radius: 5px;
+    font-size: 9pt;
+  }
+
+  .mid .posted .post .panel a i {
+    margin-right: 5px;
+  }
+
+  .mid .posted .post .panel a.active {
+    color: blue;
+    font-weight: bold;
+  }
+
+  .mid .comment {
+    width: 100%;
+    height: auto;
+    min-height: 20vh;
+    display: block;
+    overflow: hidden;
+    text-align: left;
+    margin: auto;
+  }
+
+  .mid .comment label {
+    width: 100%;
+    display: block;
+    margin: 10px auto;
+    font-size: 10pt;
+    font-weight: bold;
+    border-bottom: 1px solid #999;
+    padding: 10px 15px;
+  }
+
+  .mid .comment .cmnt {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    margin: 1.5rem auto;
+    text-align: left;
+    border-bottom: 1px solid #999;
+  }
+
+  .mid .comment .cmnt .fig .image {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+    margin: auto 5px auto 10px;
+  }
+
+  .mid .comment .cmnt .fig .image img {
+    width: 40px;
+    height: 40px;
+    display: block;
+    overflow: hidden;
+    border: 1px double #999;
+    border-radius: 50%;
+    margin: 5px auto;
+  }
+
+  .mid .comment .cmnt .fig .label {
+    width: auto;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+  }
+
+  .mid .comment .cmnt .fig .label a,
+  .mid .comment .cmnt .fig .label p {
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    display: block;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin: 2px auto;
+  }
+
+  .mid .comment .cmnt .fig .label a {
+    text-transform: capitalize;
+    font-size: 11pt;
+    text-decoration: none;
+    font-weight: bold;
+    color: #111;
+  }
+
+  .mid .comment .cmnt .fig .label p {
+    font-size: 8pt;
+    font-weight: inherit;
+    color: #666;
+  }
+
+  .mid .comment .cmnt .content pre {
+    max-width: 85%;
+    display: block;
+    margin: 10px 0;
+    padding: 5px 10px 5px 10px;
+  }
+
+  .mid .comment .cmnt .content img {
+    width: auto;
+    max-width: 40%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #999;
+    margin: 10px 10px;
+  }
+
+  .mid .comment .cmnt .tip {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    padding: 10px 10px;
+  }
+
+  .mid .comment .cmnt .tip a {
+    font-size: 9pt;
+    font-weight: bold;
+    margin: auto 5px;
+    display: inline-block;
+    text-decoration: underline;
+    color: #111;
+  }
+}

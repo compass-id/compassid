@@ -1,0 +1,10 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Disallow:
+Sitemap: https://compasspubindonesia.com/sitemap.xml
+Sitemap: https://compasspubindonesia.com/blogs/date-sitemap.xml
+Sitemap: https://compasspubindonesia.com/blogs/author-sitemap.xml
+Sitemap: https://compasspubindonesia.com/blogs/post_tag-sitemap.xml
+Sitemap: https://compasspubindonesia.com/blogs/category-sitemap.xml
+Sitemap: https://compasspubindonesia.com/blogs/post-sitemap.xml
+Sitemap: https://compasspubindonesia.com/blogs/addl-sitemap.xml 

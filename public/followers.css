@@ -1,0 +1,177 @@
+@media only screen and (min-width: 601px) {
+  .flower {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    margin: auto;
+  }
+
+  .flower .flow {
+    width: 30%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #999;
+    margin: 1rem 5px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .flower p.label {
+    font-weight: bold;
+    margin: 1rem auto;
+    display: block;
+    overflow: hidden;
+    font-size: 12pt;
+    border-bottom: 1px solid #999;
+    width: 98%;
+    height: auto;
+    padding: 15px 15px;
+  }
+
+  .flower .flow img {
+    width: 100%;
+    height: 165px;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #999;
+  }
+
+  .flower .flow a,
+  .flower .flow p {
+    display: block;
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .flower .flow a {
+    font-weight: bold;
+    color: #111;
+    font-size: 11pt;
+  }
+
+  .flower .flow a.fol {
+    background: blue;
+  }
+
+  .flower .flow a.ufol {
+    background: #111;
+  }
+
+  .flower .flow a.fol,
+  .flower .flow a.ufol {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 15px auto 10px auto;
+    border-radius: 30px;
+    border: 1px solid #999;
+    padding: 5px 10px;
+    font-weight: initial;
+    color: #fff;
+  }
+
+  .flower .flow p {
+    font-size: 9pt;
+    color: #444;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .flower {
+    width: 100%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    clear: both;
+    margin: auto;
+  }
+
+  .flower .flow {
+    width: 44%;
+    height: auto;
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #999;
+    margin: 0.5rem 10px;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .flower p.label {
+    font-weight: bold;
+    margin: 1rem auto;
+    display: block;
+    overflow: hidden;
+    font-size: 12pt;
+    border-bottom: 1px solid #999;
+    width: 98%;
+    height: auto;
+    padding: 15px 15px;
+  }
+
+  .flower .flow img {
+    width: 100%;
+    height: 165px;
+    display: block;
+    overflow: hidden;
+    object-fit: cover;
+    object-position: center;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #999;
+  }
+
+  .flower .flow a,
+  .flower .flow p {
+    display: block;
+    width: 90%;
+    height: auto;
+    overflow: hidden;
+    text-decoration: none;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .flower .flow a {
+    font-weight: bold;
+    color: #111;
+    font-size: 11pt;
+  }
+
+  .flower .flow a.fol {
+    background: blue;
+  }
+
+  .flower .flow a.ufol {
+    background: #111;
+  }
+
+  .flower .flow a.fol,
+  .flower .flow a.ufol {
+    width: 90%;
+    height: auto;
+    display: block;
+    overflow: hidden;
+    margin: 15px auto 10px auto;
+    border-radius: 30px;
+    border: 1px solid #999;
+    padding: 5px 10px;
+    font-weight: initial;
+    color: #fff;
+  }
+
+  .flower .flow p {
+    font-size: 9pt;
+    color: #444;
+  }
+}
