@@ -172,7 +172,11 @@ const PostList = () => {
               post.body.toLowerCase().includes(search) ? (
                 <>
                   <div
-                    onClick={() => handleClick(post._id)}
+                    onClick={() =>
+                      post._id
+                        ? handleClick(post._id)
+                        : window.open(post.url, "_self")
+                    }
                     className="event"
                     key={index}
                   >

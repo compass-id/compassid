@@ -422,7 +422,11 @@ function Home() {
                       />
                       <button
                         type="button"
-                        onClick={() => handleClick(item._id)}
+                        onClick={() =>
+                          item._id
+                            ? handleClick(item._id)
+                            : window.open(item.url, "_self")
+                        }
                         className="btn"
                       >
                         Read This post
