@@ -20,6 +20,7 @@ function EventPartyAdd() {
     email: "",
     phone: "",
     address: "",
+    method: "",
     file: "",
     event: "",
     room: "",
@@ -77,6 +78,7 @@ function EventPartyAdd() {
       end: event.end,
       name: eventData.name,
       email: eventData.email,
+      method: eventData.method,
     };
 
     const formiData = new FormData();
@@ -427,7 +429,6 @@ function EventPartyAdd() {
               )}
               <div className="section"></div>
               <div className="section"></div>
-              <div className="section"></div>
             </div>
           </>
         )}
@@ -565,6 +566,36 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
+                <div className="field">
+                  <label className="label">Payment | Pembayaran</label>
+                  <select
+                    id="method"
+                    name="method"
+                    value={eventData.method}
+                    onChange={handleChange}
+                    required
+                  >
+                    <option value="">
+                      --- Select Payment | Pilih Pembayaran ---
+                    </option>
+                    <option value="Bank Transfer">
+                      Bank Transfer | Transfer Bank
+                    </option>
+                    <option value="Credit (Bank)">
+                      Credit (Bank) | Kredit (Bank)
+                    </option>
+                    <option value="Digital Transfer">
+                      Digital Transfer | Transfer Digital
+                    </option>
+                    <option value="Credit (Digital)">
+                      Credit (Digital) | Kredit (Digital)
+                    </option>
+                    <option value="Credit Card">
+                      Credit Card | Kartu Kredit
+                    </option>
+                    <option value="Other">Other | Lainnya</option>
+                  </select>
+                </div>
                 {pierce > 0 ? (
                   <div className="field">
                     <label className="label">
