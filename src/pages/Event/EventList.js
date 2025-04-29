@@ -253,7 +253,11 @@ const EventList = () => {
                         </p>
                       </>
                     ) : (
-                      <></>
+                      <>
+                        <p>
+                          <strong>Price:</strong> -
+                        </p>
+                      </>
                     )}
 
                     <button
