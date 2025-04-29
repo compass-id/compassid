@@ -92,7 +92,7 @@ function EventPartyAdd() {
         // Add the Event into database with axios
         await axios.post(
           `https://seg-server.vercel.app/api/parties`,
-          cleanedData,
+          cleanedData
         );
 
         await axios.post(
@@ -102,7 +102,7 @@ function EventPartyAdd() {
             headers: {
               "Content-Type": "multipart/form-data",
             },
-          },
+          }
         );
 
         await axios.post(
@@ -112,12 +112,12 @@ function EventPartyAdd() {
             headers: {
               "Content-Type": "multipart/form-data",
             },
-          },
+          }
         );
 
         // Navigate to main page
         alert(
-          `Halo ${eventData.name}! Anda berhasil terdaftar dalam acara ${event.title}! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`,
+          `Halo ${eventData.name}! Anda berhasil terdaftar dalam acara ${event.title}! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`
         );
 
         navigate(`/events`);
@@ -404,7 +404,27 @@ function EventPartyAdd() {
                   </p>
                 </div>
               ) : (
-                <></>
+                <div>
+                  <p>
+                    Silakan untuk mendaftar/booking terlebih dahulu
+                    <br />
+                    <br />
+                    {event.contact !== "" ? (
+                      <>
+                        <br />
+                        <br />
+                        Informasi selengkapnya, hubungi:
+                        <br />
+                        CS -{" "}
+                        <a href={`https://wa.me/62${event.contact}`}>
+                          {event.contact}
+                        </a>
+                      </>
+                    ) : (
+                      <></>
+                    )}
+                  </p>
+                </div>
               )}
               <div className="section"></div>
               <div className="section"></div>
@@ -420,7 +440,7 @@ function EventPartyAdd() {
         ) : (
           <div className="right">
             <div className="section headline">
-              <h4>Join Event</h4>
+              <h4>Join Event / Class</h4>
               <button onClick={() => navigate(`/events`)} className="btn">
                 See Events
               </button>
@@ -459,6 +479,9 @@ function EventPartyAdd() {
                     <option value="Teacher">Teacher | Guru</option>
                     <option value="Tutor">Tutor | Tutor</option>
                     <option value="Parent">Parent | Orang Tua</option>
+                    <option value="Student">Student | Pelajar</option>
+                    <option value="College">College Student | Mahasiswa</option>
+                    <option value="Employee">Employee | Karyawan</option>
                     <option value="Other">Other | Lainnya</option>
                   </select>
                 </div>
@@ -570,7 +593,7 @@ function EventPartyAdd() {
                 <div className="section">
                   <div className="controls forms">
                     <button type="submit" className="btn" id="submit">
-                      Join This Event
+                      Join This Event / Class
                     </button>
                   </div>
                 </div>
