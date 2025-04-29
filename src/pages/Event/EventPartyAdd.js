@@ -346,7 +346,7 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {event.price !== "" ? (
+                {event.price !== "" && event.price > 0 ? (
                   <div className="section">
                     <p>
                       <strong>Price:</strong>

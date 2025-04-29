@@ -245,7 +245,7 @@ const EventList = () => {
                       </>
                     )}
 
-                    {event.price !== "" ? (
+                    {event.price !== "" && event.price > 0 ? (
                       <>
                         <p>
                           <strong>Price:</strong>{" "}
