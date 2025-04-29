@@ -351,7 +351,7 @@ function EventPartyAdd() {
                     <p>
                       <strong>Price:</strong>
                     </p>
-                    <p>{formatCurrency(event.price)}</p>
+                    <p>{event.price > 0 ? formatCurrency(event.price) : `-`}</p>
                   </div>
                 ) : (
                   <></>
@@ -407,7 +407,6 @@ function EventPartyAdd() {
                 <div>
                   <p>
                     Silakan untuk mendaftar/booking terlebih dahulu
-                    <br />
                     <br />
                     {event.contact !== "" ? (
                       <>

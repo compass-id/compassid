@@ -248,7 +248,8 @@ const EventList = () => {
                     {event.price !== "" ? (
                       <>
                         <p>
-                          <strong>Price:</strong> {formatCurrency(event.price)}
+                          <strong>Price:</strong>{" "}
+                          {event.price > 0 ? formatCurrency(event.price) : `-`}
                         </p>
                       </>
                     ) : (
@@ -259,7 +260,7 @@ const EventList = () => {
                       onClick={() => navigate(`/event-join/${event._id}`)}
                       className="btn"
                     >
-                      JOIN THIS EVENT
+                      JOIN THIS EVENT / CLASS
                     </button>
                   </div>
                 </div>
