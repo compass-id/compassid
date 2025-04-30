@@ -378,7 +378,7 @@ function EventPartyAdd() {
                 </button>
               </div>
               <div className="section"></div>
-              {pierce > 0 ? (
+              {event.type === "Registration" && pierce > 0 ? (
                 <div>
                   <p>
                     Untuk mendaftar, silakan lakukan pembayaran via transfer ke
@@ -405,10 +405,11 @@ function EventPartyAdd() {
                     )}
                   </p>
                 </div>
-              ) : (
+              ) : event.type === "Booking" ? (
                 <div>
                   <p>
-                    Silakan untuk mendaftar/booking terlebih dahulu
+                    Silakan untuk booking terlebih dahulu dengan mengisi
+                    formulir dibawah.
                     <br />
                     {event.contact !== "" ? (
                       <>
@@ -426,6 +427,8 @@ function EventPartyAdd() {
                     )}
                   </p>
                 </div>
+              ) : (
+                <></>
               )}
               <div className="section"></div>
               <div className="section"></div>
@@ -566,37 +569,47 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                <div className="field">
-                  <label className="label">Payment | Pembayaran</label>
-                  <select
-                    id="method"
-                    name="method"
-                    value={eventData.method}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">
-                      --- Select Payment | Pilih Pembayaran ---
-                    </option>
-                    <option value="Bank Transfer">
-                      Bank Transfer | Transfer Bank
-                    </option>
-                    <option value="Credit (Bank)">
-                      Credit (Bank) | Kredit (Bank)
-                    </option>
-                    <option value="Digital Transfer">
-                      Digital Transfer | Transfer Digital
-                    </option>
-                    <option value="Credit (Digital)">
-                      Credit (Digital) | Kredit (Digital)
-                    </option>
-                    <option value="Credit Card">
-                      Credit Card | Kartu Kredit
-                    </option>
-                    <option value="Other">Other | Lainnya</option>
-                  </select>
-                </div>
-                {pierce > 0 ? (
+                {event.type === "Survey" ? (
+                  <div className="field">
+                    <label className="label">
+                      Payment Plan | Rencana Pembayaran
+                    </label>
+                    <select
+                      id="plan"
+                      name="plan"
+                      value={eventData.method}
+                      onChange={handleChange}
+                      required
+                    >
+                      <option value="">
+                        --- Select Payment Plan | Pilih Rencana Pembayaran ---
+                      </option>
+                      <option value="Bank Transfer (Full Payment)">
+                        Bank Transfer (Full Payment) | Transfer bank (pembayaran
+                        penuh)
+                      </option>
+                      <option value="Bank Transfer (Credit Payment)">
+                        Bank Transfer (Credit Payment) | Transfer bank
+                        (pembayaran cicilan)
+                      </option>
+                      <option value="Digital Payment (Full Payment)">
+                        Digital Payment (Full Payment) | Digital payment
+                        (pembayaran penuh)
+                      </option>
+                      <option value="Digital Payment (Credit Payment)">
+                        Digital Payment (Credit Payment) | Digital payment
+                        (pembayaran cicilan)
+                      </option>
+                      <option value="Credit Card">
+                        Credit Card | Kartu Kredit
+                      </option>
+                      <option value="Other">Other | Lainnya</option>
+                    </select>
+                  </div>
+                ) : (
+                  <></>
+                )}
+                {event.type === "Registration" && pierce > 0 ? (
                   <div className="field">
                     <label className="label">
                       Proof of Payment | Bukti Pembayaran
@@ -627,6 +640,20 @@ function EventPartyAdd() {
                     </button>
                   </div>
                 </div>
+                {event.type === "Survey" ? (
+                  <>
+                    <div className="section">
+                      <p>
+                        <strong>Perhatian:</strong> Dengan mengisi formulir
+                        diatas, anda telah melakukan booking untuk Event / Kelas
+                        ini. Untuk informaasi pembayaran biaya pendaftaran akan
+                        kami hubungi lagi nanti. Terimakasih.
+                      </p>
+                    </div>
+                  </>
+                ) : (
+                  <></>
+                )}
               </form>
             </div>
           </div>
