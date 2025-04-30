@@ -588,16 +588,16 @@ function EventPartyAdd() {
                         Bank Transfer (Full Payment) | Transfer bank (pembayaran
                         penuh)
                       </option>
-                      <option value="Bank Transfer (Credit Payment)">
-                        Bank Transfer (Credit Payment) | Transfer bank
+                      <option value="Bank Transfer (Installment Payment)">
+                        Bank Transfer (Installment Payment) | Transfer bank
                         (pembayaran cicilan)
                       </option>
                       <option value="Digital Payment (Full Payment)">
                         Digital Payment (Full Payment) | Digital payment
                         (pembayaran penuh)
                       </option>
-                      <option value="Digital Payment (Credit Payment)">
-                        Digital Payment (Credit Payment) | Digital payment
+                      <option value="Digital Payment (Installment Payment)">
+                        Digital Payment (Installment Payment) | Digital payment
                         (pembayaran cicilan)
                       </option>
                       <option value="Credit Card">
