@@ -214,7 +214,10 @@ const EventList = () => {
                     {event.start !== "" ? (
                       <>
                         <p>
-                          <strong>Date:</strong> {formatTime(event.start)}
+                          <strong>Date:</strong>{" "}
+                          {event.type === "Registration"
+                            ? formatTime(event.start)
+                            : "-"}
                         </p>
                       </>
                     ) : (

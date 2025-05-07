@@ -234,7 +234,7 @@ function EventPartyAdd() {
   return (
     <>
       <Helmet>
-        <title>{event.title} | Compass Publishing Indonesia</title>
+        <title>Events | Compass Publishing Indonesia</title>
         <meta name="description" content={`${event.desc}`} />
         <meta
           property="og:url"
@@ -646,8 +646,8 @@ function EventPartyAdd() {
                       <p>
                         <strong>Perhatian:</strong> Dengan mengisi formulir
                         diatas, anda telah melakukan booking untuk Event / Kelas
-                        ini. Untuk informaasi pembayaran biaya pendaftaran akan
-                        kami hubungi lagi nanti. Terimakasih.
+                        ini. Untuk informasi pembayaran biaya pendaftaran akan
+                        kami hubungi lagi nanti. Terima kasih.
                       </p>
                     </div>
                   </>
