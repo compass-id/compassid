@@ -490,7 +490,7 @@ function EventPartyAdd() {
                 </div>
                 <div className="field">
                   <label className="label">
-                    School/Organization | Sekolah/Organisasi
+                    School/Organization/Personal | Sekolah/Organisasi/Personal
                   </label>
                   <input
                     type="text"
