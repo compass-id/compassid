@@ -500,7 +500,7 @@ function EventPartyAdd() {
                     name="company"
                     value={eventData.company}
                     onChange={handleChange}
-                    placeholder="School/Organization | Sekolah/Organisasi"
+                    placeholder="School/Organization/Personal | Sekolah/Organisasi/Personal"
                     required
                   />
                 </div>
