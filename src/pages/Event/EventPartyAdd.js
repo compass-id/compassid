@@ -575,8 +575,8 @@ function EventPartyAdd() {
                       Payment Plan | Rencana Pembayaran
                     </label>
                     <select
-                      id="plan"
-                      name="plan"
+                      id="method"
+                      name="method"
                       value={eventData.method}
                       onChange={handleChange}
                       required
