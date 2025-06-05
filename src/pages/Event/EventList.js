@@ -183,95 +183,103 @@ const EventList = () => {
           // display table after loading
           <div className="section">
             <div className="section">
-              {events.map((event, index) => (
-                <div
-                  className="event"
-                  key={index}
-                  onClick={() => handleEvent(event._id)}
-                >
-                  {event.img !== "" ? (
-                    <>
-                      <img loading="lazy" src={event.img} alt={event.img} />
-                    </>
-                  ) : (
-                    <></>
-                  )}
-
-                  <div className="section caption">
-                    {event.title !== "" ? (
-                      <>
-                        <h3
-                          title={event.title}
-                          style={{ textTransform: "uppercase" }}
-                        >
-                          {event.title}
-                        </h3>
-                      </>
-                    ) : (
-                      <></>
-                    )}
-
-                    {event.start !== "" ? (
-                      <>
-                        <p>
-                          <strong>Date:</strong>{" "}
-                          {event.type === "Registration"
-                            ? formatTime(event.start)
-                            : "-"}
-                        </p>
-                      </>
-                    ) : (
-                      <></>
-                    )}
-
-                    {event.model !== "" ? (
-                      <>
-                        <p title={event.model}>
-                          <strong>Role:</strong> {event.model}
-                        </p>
-                      </>
-                    ) : (
-                      <></>
-                    )}
-
-                    {event.address !== "" ? (
-                      <>
-                        <p title={event.address}>
-                          <strong>Location:</strong> {event.address}
-                        </p>
-                      </>
-                    ) : (
-                      <>
-                        <p title={event.address}>
-                          <strong>Location:</strong> -
-                        </p>
-                      </>
-                    )}
-
-                    {event.price !== "" && event.price > 0 ? (
-                      <>
-                        <p>
-                          <strong>Price:</strong>{" "}
-                          {event.price > 0 ? formatCurrency(event.price) : `-`}
-                        </p>
-                      </>
-                    ) : (
-                      <>
-                        <p>
-                          <strong>Price:</strong> -
-                        </p>
-                      </>
-                    )}
-
-                    <button
-                      onClick={() => navigate(`/event-join/${event._id}`)}
-                      className="btn"
+              {events.map((event, index) =>
+                event.type === "Agent" ? (
+                  <></>
+                ) : (
+                  <>
+                    <div
+                      className="event"
+                      key={index}
+                      onClick={() => handleEvent(event._id)}
                     >
-                      JOIN THIS EVENT / CLASS
-                    </button>
-                  </div>
-                </div>
-              ))}
+                      {event.img !== "" ? (
+                        <>
+                          <img loading="lazy" src={event.img} alt={event.img} />
+                        </>
+                      ) : (
+                        <></>
+                      )}
+
+                      <div className="section caption">
+                        {event.title !== "" ? (
+                          <>
+                            <h3
+                              title={event.title}
+                              style={{ textTransform: "uppercase" }}
+                            >
+                              {event.title}
+                            </h3>
+                          </>
+                        ) : (
+                          <></>
+                        )}
+
+                        {event.start !== "" ? (
+                          <>
+                            <p>
+                              <strong>Date:</strong>{" "}
+                              {event.type === "Registration"
+                                ? formatTime(event.start)
+                                : "-"}
+                            </p>
+                          </>
+                        ) : (
+                          <></>
+                        )}
+
+                        {event.model !== "" ? (
+                          <>
+                            <p title={event.model}>
+                              <strong>Role:</strong> {event.model}
+                            </p>
+                          </>
+                        ) : (
+                          <></>
+                        )}
+
+                        {event.address !== "" ? (
+                          <>
+                            <p title={event.address}>
+                              <strong>Location:</strong> {event.address}
+                            </p>
+                          </>
+                        ) : (
+                          <>
+                            <p title={event.address}>
+                              <strong>Location:</strong> -
+                            </p>
+                          </>
+                        )}
+
+                        {event.price !== "" && event.price > 0 ? (
+                          <>
+                            <p>
+                              <strong>Price:</strong>{" "}
+                              {event.price > 0
+                                ? formatCurrency(event.price)
+                                : `-`}
+                            </p>
+                          </>
+                        ) : (
+                          <>
+                            <p>
+                              <strong>Price:</strong> -
+                            </p>
+                          </>
+                        )}
+
+                        <button
+                          onClick={() => navigate(`/event-join/${event._id}`)}
+                          className="btn"
+                        >
+                          JOIN THIS EVENT / CLASS
+                        </button>
+                      </div>
+                    </div>
+                  </>
+                )
+              )}
             </div>
           </div>
         )}

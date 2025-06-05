@@ -24,6 +24,7 @@ function EventPartyAdd() {
     file: "",
     event: "",
     room: "",
+    referral: "",
   });
 
   // Setting up useNavigate
@@ -79,6 +80,7 @@ function EventPartyAdd() {
       name: eventData.name,
       email: eventData.email,
       method: eventData.method,
+      referral: eventData.referral,
     };
 
     const formiData = new FormData();
@@ -569,6 +571,29 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
+                {event.type === "Agent" ? (
+                  <>
+                    <div className="field">
+                      <label className="label">
+                        From whom did you hear about this event? | Dari siapa
+                        anda tahu acara ini?
+                      </label>
+                      <input
+                        type="text"
+                        autoComplete="on"
+                        className="input"
+                        id="referral"
+                        name="referral"
+                        value={eventData.referral}
+                        onChange={handleChange}
+                        placeholder="Sebutkan nama dengan jelas.."
+                        required
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <></>
+                )}
                 {event.type === "Survey" ? (
                   <div className="field">
                     <label className="label">
@@ -609,7 +634,8 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {event.type === "Registration" && pierce > 0 ? (
+                {(event.type === "Registration" && pierce > 0) ||
+                (event.type === "Agent" && pierce > 0) ? (
                   <div className="field">
                     <label className="label">
                       Proof of Payment | Bukti Pembayaran
