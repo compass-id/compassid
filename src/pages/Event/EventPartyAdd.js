@@ -380,7 +380,8 @@ function EventPartyAdd() {
                 </button>
               </div>
               <div className="section"></div>
-              {event.type === "Registration" && pierce > 0 ? (
+              {(event.type === "Registration" && pierce > 0) ||
+              (event.type === "Agent" && pierce > 0) ? (
                 <div>
                   <p>
                     Untuk mendaftar, silakan lakukan pembayaran via transfer ke
