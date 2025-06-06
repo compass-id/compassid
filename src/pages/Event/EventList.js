@@ -225,7 +225,11 @@ const EventList = () => {
                             </p>
                           </>
                         ) : (
-                          <></>
+                          <>
+                            <p>
+                              <strong>Date:</strong> -
+                            </p>
+                          </>
                         )}
 
                         {event.model !== "" ? (
