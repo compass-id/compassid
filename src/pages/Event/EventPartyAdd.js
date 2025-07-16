@@ -109,7 +109,7 @@ function EventPartyAdd() {
 
         // Navigate to main page
         alert(
-          `Halo ${eventData.name}! Anda berhasil terdaftar dalam acara ${event.title}! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`
+          `Halo ${eventData.name !== "" ? eventData.name : eventData.parentName}! Anda berhasil terdaftar dalam acara ${event.title}! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`
         );
 
         navigate(`/events`);
@@ -151,6 +151,11 @@ function EventPartyAdd() {
       }
     };
 
+    const seePeg = () => {
+    document.getElementById("peg").style = "display: block;";
+  };
+
+    seePeg();
     getEvent(); // dependency array with only `search`
   }, [id]); // dependency array with only `getParty`
 
@@ -201,16 +206,6 @@ function EventPartyAdd() {
     // Return the formatted date string
     return `${dayOfWeek}, ${day} ${month} ${year}. ${time} WIB`;
   }
-
-  const seePeg = () => {
-    document.getElementById("see").style = "display: none;";
-    document.getElementById("peg").style = "display: block;";
-  };
-
-  const unseePeg = () => {
-    document.getElementById("see").style = "display: block;";
-    document.getElementById("peg").style = "display: none;";
-  };
 
   const handleCopy = () => {
     const uri = `https://www.compasspubindonesia.com/event-join.php?id=${event._id}`;
@@ -269,9 +264,6 @@ function EventPartyAdd() {
                 <></>
               )}
               <div className="section"></div>
-              <button type="button" onClick={seePeg} className="btni" id="see">
-                See Description
-              </button>
               <div id="peg">
                 <div
                   style={{
@@ -284,16 +276,6 @@ function EventPartyAdd() {
                   <h4>Event Description</h4>
                 </div>
                 <div className="section"></div>
-                {event.pic !== "" ? (
-                  <div className="section">
-                    <p>
-                      <strong>Speaker:</strong>
-                    </p>
-                    <p>{event.pic}</p>
-                  </div>
-                ) : (
-                  <></>
-                )}
                 {event.model !== "" ? (
                   <div className="section">
                     <p>
@@ -358,14 +340,6 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                <button
-                  type="button"
-                  onClick={unseePeg}
-                  className="btni"
-                  id="unsee"
-                >
-                  See Less
-                </button>
               </div>
               <div className="section"></div>
               {event.type === "Registration" || event.type === "Agent" || event.type === "Contest" ? (
