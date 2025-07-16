@@ -109,7 +109,11 @@ function EventPartyAdd() {
 
         // Navigate to main page
         alert(
-          `Halo ${eventData.name !== "" ? eventData.name : eventData.parentName}! Anda berhasil terdaftar dalam acara ${event.title}! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`
+          `Halo ${
+            eventData.name !== "" ? eventData.name : eventData.parentName
+          }! Anda berhasil terdaftar dalam acara ${
+            event.title
+          }! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`
         );
 
         navigate(`/events`);
@@ -151,11 +155,6 @@ function EventPartyAdd() {
       }
     };
 
-    const seePeg = () => {
-    document.getElementById("peg").style = "display: block;";
-  };
-
-    seePeg();
     getEvent(); // dependency array with only `search`
   }, [id]); // dependency array with only `getParty`
 
@@ -264,15 +263,18 @@ function EventPartyAdd() {
                 <></>
               )}
               <div className="section"></div>
-              <div id="peg">
+              <div
+                id="peg"
+                style={{
+                  display: "block",
+                }}>
                 <div
                   style={{
                     width: "100%",
                     padding: "1rem 5px",
                     textAlign: "center",
                     borderBottom: "1px solid #111",
-                  }}
-                >
+                  }}>
                   <h4>Event Description</h4>
                 </div>
                 <div className="section"></div>
@@ -352,7 +354,9 @@ function EventPartyAdd() {
                 )}
               </div>
               <div className="section"></div>
-              {event.type === "Registration" || event.type === "Agent" || event.type === "Contest" ? (
+              {event.type === "Registration" ||
+              event.type === "Agent" ||
+              event.type === "Contest" ? (
                 <div>
                   <p>
                     Untuk mendaftar, silakan lakukan pembayaran via transfer ke
@@ -423,111 +427,123 @@ function EventPartyAdd() {
               </button>
             </div>
             <div className="section">
-                  <form onSubmit={AddEvent} className="form">
-                    {event.type === "Registration" || event.type === "Agent" || event.type === "Booking" || event.type === "Survey" ?
-                (<><div className="field">
-                  <label className="label">Name | Nama</label>
-                  <input
-                    type="text"
-                    autoComplete="on"
-                    className="input"
-                    id="name"
-                    name="name"
-                    value={eventData.name}
-                    onChange={handleChange}
-                    placeholder="Name | Nama"
-                    required
-                  />
-                      </div>
-                      <div className="field">
-                  <label className="label">Occupation | Pekerjaan</label>
-                  <select
-                    id="job"
-                    name="job"
-                    value={eventData.job}
-                    onChange={handleChange}
-                    required
-                  >
-                    <option value="">
-                      --- Select Occupation | Pilih Pekerjaan ---
-                    </option>
-                    <option value="Headmaster">
-                      Headmaster | Kepala Sekolah
-                    </option>
-                    <option value="Teacher">Teacher | Guru</option>
-                    <option value="Tutor">Tutor | Tutor</option>
-                    <option value="Parent">Parent | Orang Tua</option>
-                    <option value="Student">Student | Pelajar</option>
-                    <option value="College">College Student | Mahasiswa</option>
-                    <option value="Employee">Employee | Karyawan</option>
-                    <option value="Other">Other | Lainnya</option>
-                  </select>
-                </div>
-                <div className="field">
-                  <label className="label">
-                    School/Organization/Personal | Sekolah/Organisasi/Personal
-                  </label>
-                  <input
-                    type="text"
-                    autoComplete="on"
-                    className="input"
-                    id="company"
-                    name="company"
-                    value={eventData.company}
-                    onChange={handleChange}
-                    placeholder="School/Organization/Personal | Sekolah/Organisasi/Personal"
-                    required
-                  />
-                </div>
-                      </>) : (<></>)}
-                    {event.type === "Contest" ?
-                      (<>
-                        <div className="field">
-                  <label className="label">Parent's Name | Nama Orangtua</label>
-                  <input
-                    type="text"
-                    autoComplete="on"
-                    className="input"
-                    id="parentName"
-                    name="parentName"
-                    value={eventData.parentName}
-                    onChange={handleChange}
-                    placeholder="Parent's Name | Nama Orangtua"
-                    required
-                  />
-                        </div>
-                        <div className="field">
-                  <label className="label">Child's Name | Nama Anak</label>
-                  <input
-                    type="text"
-                    autoComplete="on"
-                    className="input"
-                    id="childName"
-                    name="childName"
-                    value={eventData.childName}
-                    onChange={handleChange}
-                    placeholder="Child's Name | Nama Anak"
-                    required
-                  />
-                        </div>
-                        <div className="field">
-                  <label className="label">
-                    School | Sekolah
-                  </label>
-                  <input
-                    type="text"
-                    autoComplete="on"
-                    className="input"
-                    id="school"
-                    name="school"
-                    value={eventData.school}
-                    onChange={handleChange}
-                    placeholder="School | Sekolah"
-                    required
-                  />
-                </div>
-                      </>) : (<></>)}
-                
+              <form onSubmit={AddEvent} className="form">
+                {event.type === "Registration" ||
+                event.type === "Agent" ||
+                event.type === "Booking" ||
+                event.type === "Survey" ? (
+                  <>
+                    <div className="field">
+                      <label className="label">Name | Nama</label>
+                      <input
+                        type="text"
+                        autoComplete="on"
+                        className="input"
+                        id="name"
+                        name="name"
+                        value={eventData.name}
+                        onChange={handleChange}
+                        placeholder="Name | Nama"
+                        required
+                      />
+                    </div>
+                    <div className="field">
+                      <label className="label">Occupation | Pekerjaan</label>
+                      <select
+                        id="job"
+                        name="job"
+                        value={eventData.job}
+                        onChange={handleChange}
+                        required>
+                        <option value="">
+                          --- Select Occupation | Pilih Pekerjaan ---
+                        </option>
+                        <option value="Headmaster">
+                          Headmaster | Kepala Sekolah
+                        </option>
+                        <option value="Teacher">Teacher | Guru</option>
+                        <option value="Tutor">Tutor | Tutor</option>
+                        <option value="Parent">Parent | Orang Tua</option>
+                        <option value="Student">Student | Pelajar</option>
+                        <option value="College">
+                          College Student | Mahasiswa
+                        </option>
+                        <option value="Employee">Employee | Karyawan</option>
+                        <option value="Other">Other | Lainnya</option>
+                      </select>
+                    </div>
+                    <div className="field">
+                      <label className="label">
+                        School/Organization/Personal |
+                        Sekolah/Organisasi/Personal
+                      </label>
+                      <input
+                        type="text"
+                        autoComplete="on"
+                        className="input"
+                        id="company"
+                        name="company"
+                        value={eventData.company}
+                        onChange={handleChange}
+                        placeholder="School/Organization/Personal | Sekolah/Organisasi/Personal"
+                        required
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <></>
+                )}
+                {event.type === "Contest" ? (
+                  <>
+                    <div className="field">
+                      <label className="label">
+                        Parent's Name | Nama Orangtua
+                      </label>
+                      <input
+                        type="text"
+                        autoComplete="on"
+                        className="input"
+                        id="parentName"
+                        name="parentName"
+                        value={eventData.parentName}
+                        onChange={handleChange}
+                        placeholder="Parent's Name | Nama Orangtua"
+                        required
+                      />
+                    </div>
+                    <div className="field">
+                      <label className="label">Child's Name | Nama Anak</label>
+                      <input
+                        type="text"
+                        autoComplete="on"
+                        className="input"
+                        id="childName"
+                        name="childName"
+                        value={eventData.childName}
+                        onChange={handleChange}
+                        placeholder="Child's Name | Nama Anak"
+                        required
+                      />
+                    </div>
+                    <div className="field">
+                      <label className="label">School | Sekolah</label>
+                      <input
+                        type="text"
+                        autoComplete="on"
+                        className="input"
+                        id="school"
+                        name="school"
+                        value={eventData.school}
+                        onChange={handleChange}
+                        placeholder="School | Sekolah"
+                        required
+                      />
+                    </div>
+                  </>
+                ) : (
+                  <></>
+                )}
+
                 <div className="field">
                   <label className="label">Email | Email</label>
                   <input
@@ -581,8 +597,7 @@ function EventPartyAdd() {
                       name="room"
                       value={eventData.room}
                       onChange={handleChange}
-                      required
-                    >
+                      required>
                       <option value="">
                         --- Select Attendance | Pilih Kehadiran ---
                       </option>
@@ -626,8 +641,7 @@ function EventPartyAdd() {
                       name="method"
                       value={eventData.method}
                       onChange={handleChange}
-                      required
-                    >
+                      required>
                       <option value="">
                         --- Select Payment Plan | Pilih Rencana Pembayaran ---
                       </option>
@@ -656,7 +670,8 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {(event.type === "Contest" && pierce > 0) || (event.type === "Registration" && pierce > 0) ||
+                {(event.type === "Contest" && pierce > 0) ||
+                (event.type === "Registration" && pierce > 0) ||
                 (event.type === "Agent" && pierce > 0) ? (
                   <div className="field">
                     <label className="label">
@@ -713,8 +728,7 @@ function EventPartyAdd() {
         type="button"
         onClick={() => handleCopy()}
         className="fab"
-        id="fab"
-      >
+        id="fab">
         <span id="lbs">Share</span> <i className="fas fa-share-alt"></i>
       </button>
     </>
