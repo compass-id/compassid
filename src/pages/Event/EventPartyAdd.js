@@ -13,19 +13,7 @@ function EventPartyAdd() {
   const [event, setEvent] = useState({});
 
   const [selectedFile, setSelectedFile] = useState(null);
-  const [eventData, setEventData] = useState({
-    name: "",
-    company: "",
-    job: "",
-    email: "",
-    phone: "",
-    address: "",
-    method: "",
-    file: "",
-    event: "",
-    room: "",
-    referral: "",
-  });
+  const [eventData, setEventData] = useState({});
 
   // Setting up useNavigate
   const navigat = useNavigate();
@@ -380,7 +368,7 @@ function EventPartyAdd() {
                 </button>
               </div>
               <div className="section"></div>
-              {event.type === "Registration" || event.type === "Agent" ? (
+              {event.type === "Registration" || event.type === "Agent" || event.type === "Contest" ? (
                 <div>
                   <p>
                     Untuk mendaftar, silakan lakukan pembayaran via transfer ke
@@ -451,8 +439,9 @@ function EventPartyAdd() {
               </button>
             </div>
             <div className="section">
-              <form onSubmit={AddEvent} className="form">
-                <div className="field">
+                  <form onSubmit={AddEvent} className="form">
+                    {event.type === "Registration" || event.type === "Agent" || event.type === "Booking" || event.type === "Survey" ?
+                (<><div className="field">
                   <label className="label">Name | Nama</label>
                   <input
                     type="text"
@@ -465,8 +454,8 @@ function EventPartyAdd() {
                     placeholder="Name | Nama"
                     required
                   />
-                </div>
-                <div className="field">
+                      </div>
+                      <div className="field">
                   <label className="label">Occupation | Pekerjaan</label>
                   <select
                     id="job"
@@ -506,6 +495,55 @@ function EventPartyAdd() {
                     required
                   />
                 </div>
+                      </>) : (<></>)}
+                    {event.type === "Contest" ?
+                      (<>
+                        <div className="field">
+                  <label className="label">Parent's Name | Nama Orangtua</label>
+                  <input
+                    type="text"
+                    autoComplete="on"
+                    className="input"
+                    id="parentName"
+                    name="parentName"
+                    value={eventData.parentName}
+                    onChange={handleChange}
+                    placeholder="Parent's Name | Nama Orangtua"
+                    required
+                  />
+                        </div>
+                        <div className="field">
+                  <label className="label">Child's Name | Nama Anak</label>
+                  <input
+                    type="text"
+                    autoComplete="on"
+                    className="input"
+                    id="childName"
+                    name="childName"
+                    value={eventData.childName}
+                    onChange={handleChange}
+                    placeholder="Child's Name | Nama Anak"
+                    required
+                  />
+                        </div>
+                        <div className="field">
+                  <label className="label">
+                    School | Sekolah
+                  </label>
+                  <input
+                    type="text"
+                    autoComplete="on"
+                    className="input"
+                    id="school"
+                    name="school"
+                    value={eventData.school}
+                    onChange={handleChange}
+                    placeholder="School | Sekolah"
+                    required
+                  />
+                </div>
+                      </>) : (<></>)}
+                
                 <div className="field">
                   <label className="label">Email | Email</label>
                   <input
@@ -634,7 +672,7 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {(event.type === "Registration" && pierce > 0) ||
+                {(event.type === "Contest" && pierce > 0) || (event.type === "Registration" && pierce > 0) ||
                 (event.type === "Agent" && pierce > 0) ? (
                   <div className="field">
                     <label className="label">
