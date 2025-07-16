@@ -276,6 +276,16 @@ function EventPartyAdd() {
                   <h4>Event Description</h4>
                 </div>
                 <div className="section"></div>
+                {event.title !== "" ? (
+                  <div className="section">
+                    <p>
+                      <strong>Title:</strong>
+                    </p>
+                    <p>{event.title}</p>
+                  </div>
+                ) : (
+                  <></>
+                )}
                 {event.model !== "" ? (
                   <div className="section">
                     <p>
