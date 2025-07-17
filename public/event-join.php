@@ -50,11 +50,23 @@ if (isset($_GET['id'])) {
 
     <body>
 
-        <?php if ($data) { ?>
-            <script>
-                window.open('<?= $urd; ?>', "_self");
-            </script>
-        <?php } else { ?>
+        <?php if ($data) {
+
+            if ($_GET['id'] == "6877a9e52277e77063816fd1") {
+        ?>
+                <script>
+                    window.open('https://www.compasspubindonesia.com/register-ro/', "_self");
+                </script>
+            <?php
+            } else {
+            ?>
+                <script>
+                    window.open('<?= $urd; ?>', "_self");
+                </script>
+            <?php
+
+            }
+        } else { ?>
             <p>No data found for the provided ID and language.</p>
         <?php } ?>
 
