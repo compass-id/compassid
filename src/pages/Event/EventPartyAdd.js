@@ -312,7 +312,8 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {event.start !== "" && event.type === "Registration" ? (
+                {!event.start.includes("%NaN%") &&
+                event.type === "Registration" ? (
                   <div className="section">
                     <p>
                       <strong>Time:</strong>
@@ -493,7 +494,7 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {event.type === "Contest" ? (
+                {event.type === "Contest" || event.type === "Contest-Part" ? (
                   <>
                     <div className="field">
                       <label className="label">
@@ -608,7 +609,9 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {event.type === "Agent" ? (
+                {event.type === "Agent" ||
+                event.type === "Contest" ||
+                event.type === "Contest-Part" ? (
                   <>
                     <div className="field">
                       <label className="label">
@@ -631,7 +634,9 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {event.type === "Survey" ? (
+                {event.type === "Survey" ||
+                event.type === "Contest" ||
+                event.type === "Contest-Part" ? (
                   <div className="field">
                     <label className="label">
                       Payment Plan | Rencana Pembayaran
@@ -670,7 +675,18 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {(event.type === "Contest" && pierce > 0) ||
+                {(event.type === "Contest" &&
+                  eventData.method === "Bank Transfer (Full Payment)" &&
+                  pierce > 0) ||
+                (event.type === "Contest" &&
+                  eventData.method === "Digital Payment (Full Payment)" &&
+                  pierce > 0) ||
+                (event.type === "Contest-Part" &&
+                  eventData.method === "Bank Transfer (Full Payment)" &&
+                  pierce > 0) ||
+                (event.type === "Contest-Part" &&
+                  eventData.method === "Digital Payment (Full Payment)" &&
+                  pierce > 0) ||
                 (event.type === "Registration" && pierce > 0) ||
                 (event.type === "Agent" && pierce > 0) ? (
                   <div className="field">
