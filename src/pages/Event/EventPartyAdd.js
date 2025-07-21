@@ -434,7 +434,9 @@ function EventPartyAdd() {
                 event.type === "Survey" ? (
                   <>
                     <div className="field">
-                      <label className="label">Name | Nama</label>
+                      <label className="label">
+                        <strong>Name | Nama</strong>
+                      </label>
                       <input
                         type="text"
                         autoComplete="on"
@@ -448,7 +450,9 @@ function EventPartyAdd() {
                       />
                     </div>
                     <div className="field">
-                      <label className="label">Occupation | Pekerjaan</label>
+                      <label className="label">
+                        <strong>Occupation | Pekerjaan</strong>
+                      </label>
                       <select
                         id="job"
                         name="job"
@@ -474,8 +478,10 @@ function EventPartyAdd() {
                     </div>
                     <div className="field">
                       <label className="label">
-                        School/Organization/Personal |
-                        Sekolah/Organisasi/Personal
+                        <strong>
+                          School/Organization/Personal |
+                          Sekolah/Organisasi/Personal
+                        </strong>
                       </label>
                       <input
                         type="text"
@@ -497,7 +503,7 @@ function EventPartyAdd() {
                   <>
                     <div className="field">
                       <label className="label">
-                        Parent's Name | Nama Orangtua
+                        <strong>Parent's Name | Nama Orangtua</strong>
                       </label>
                       <input
                         type="text"
@@ -512,7 +518,9 @@ function EventPartyAdd() {
                       />
                     </div>
                     <div className="field">
-                      <label className="label">Child's Name | Nama Anak</label>
+                      <label className="label">
+                        <strong>Child's Name | Nama Anak</strong>
+                      </label>
                       <input
                         type="text"
                         autoComplete="on"
@@ -526,7 +534,9 @@ function EventPartyAdd() {
                       />
                     </div>
                     <div className="field">
-                      <label className="label">School | Sekolah</label>
+                      <label className="label">
+                        <strong>School | Sekolah</strong>
+                      </label>
                       <input
                         type="text"
                         autoComplete="on"
@@ -545,7 +555,9 @@ function EventPartyAdd() {
                 )}
 
                 <div className="field">
-                  <label className="label">Email | Email</label>
+                  <label className="label">
+                    <strong>Email | Email</strong>
+                  </label>
                   <input
                     type="text"
                     autoComplete="on"
@@ -560,8 +572,7 @@ function EventPartyAdd() {
                 </div>
                 <div className="field">
                   <label className="label">
-                    {" "}
-                    WhatsApp / Phone | WhatsApp / Telepon
+                    <strong>WhatsApp / Phone | WhatsApp / Telepon</strong>
                   </label>
                   <input
                     type="text"
@@ -576,7 +587,9 @@ function EventPartyAdd() {
                   />
                 </div>
                 <div className="field">
-                  <label className="label">City | Kota</label>
+                  <label className="label">
+                    <strong>City | Kota</strong>
+                  </label>
                   <input
                     type="text"
                     autoComplete="on"
@@ -591,7 +604,9 @@ function EventPartyAdd() {
                 </div>
                 {event.model === "Hybrid (Online & Onsite)" ? (
                   <div className="field">
-                    <label className="label">Attendance | Kehadiran</label>
+                    <label className="label">
+                      <strong>Attendance | Kehadiran</strong>
+                    </label>
                     <select
                       id="room"
                       name="room"
@@ -614,8 +629,10 @@ function EventPartyAdd() {
                   <>
                     <div className="field">
                       <label className="label">
-                        From whom did you hear about this event? | Dari siapa
-                        anda tahu acara ini?
+                        <strong>
+                          From whom did you hear about this event? | Dari siapa
+                          anda tahu acara ini?
+                        </strong>
                       </label>
                       <input
                         type="text"
@@ -636,7 +653,7 @@ function EventPartyAdd() {
                 {event.type === "Survey" || event.type === "Contest-Part" ? (
                   <div className="field">
                     <label className="label">
-                      Payment Plan | Rencana Pembayaran
+                      <strong>Payment Plan | Rencana Pembayaran</strong>
                     </label>
                     <select
                       id="method"
@@ -677,6 +694,7 @@ function EventPartyAdd() {
                         "Digital Payment (Installment Payment)" &&
                       pierce > 0) ? (
                       <>
+                        <br />
                         <label className="label">
                           <strong>
                             Terms of Payment | Ketentuan Pembayaran:
@@ -685,17 +703,17 @@ function EventPartyAdd() {
                         <br />
                         <label className="label">
                           - First Payment | Pembayaran Pertama ={" "}
-                          <strong>{formatCurrency(event.price * 0.5)}</strong>
+                          <strong>{formatCurrency(event.price * 0.47)}</strong>
                         </label>
                         <br />
                         <label className="label">
                           - Second Payment | Pembayaran Kedua ={" "}
-                          <strong>{formatCurrency(event.price * 0.25)}</strong>
+                          <strong>{formatCurrency(event.price * 0.265)}</strong>
                         </label>
                         <br />
                         <label className="label">
                           - Third Payment | Pembayaran Ketiga ={" "}
-                          <strong>{formatCurrency(event.price * 0.25)}</strong>
+                          <strong>{formatCurrency(event.price * 0.265)}</strong>
                         </label>
                       </>
                     ) : (
@@ -711,7 +729,7 @@ function EventPartyAdd() {
                 (event.type === "Agent" && pierce > 0) ? (
                   <div className="field">
                     <label className="label">
-                      Proof of Payment | Bukti Pembayaran
+                      <strong>Proof of Payment | Bukti Pembayaran</strong>
                     </label>
                     <br />
                     <label style={{ fontSize: "10pt" }}>
