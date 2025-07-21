@@ -312,8 +312,7 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {!event.start.includes("%NaN%") &&
-                event.type === "Registration" ? (
+                {event.start !== "" && event.type === "Registration" ? (
                   <div className="section">
                     <p>
                       <strong>Time:</strong>
@@ -634,9 +633,7 @@ function EventPartyAdd() {
                 ) : (
                   <></>
                 )}
-                {event.type === "Survey" ||
-                event.type === "Contest" ||
-                event.type === "Contest-Part" ? (
+                {event.type === "Survey" || event.type === "Contest-Part" ? (
                   <div className="field">
                     <label className="label">
                       Payment Plan | Rencana Pembayaran
@@ -671,22 +668,45 @@ function EventPartyAdd() {
                       </option>
                       <option value="Other">Other | Lainnya</option>
                     </select>
+                    {(event.type === "Contest-Part" &&
+                      eventData.method ===
+                        "Bank Transfer (Installment Payment)" &&
+                      pierce > 0) ||
+                    (event.type === "Contest-Part" &&
+                      eventData.method ===
+                        "Digital Payment (Installment Payment)" &&
+                      pierce > 0) ? (
+                      <>
+                        <label className="label">
+                          <strong>
+                            Terms of Payment | Ketentuan Pembayaran:
+                          </strong>
+                        </label>
+                        <br />
+                        <label className="label">
+                          - First Payment | Pembayaran Pertama ={" "}
+                          <strong>{formatCurrency(event.price * 0.5)}</strong>
+                        </label>
+                        <br />
+                        <label className="label">
+                          - Second Payment | Pembayaran Kedua ={" "}
+                          <strong>{formatCurrency(event.price * 0.25)}</strong>
+                        </label>
+                        <br />
+                        <label className="label">
+                          - Third Payment | Pembayaran Ketiga ={" "}
+                          <strong>{formatCurrency(event.price * 0.25)}</strong>
+                        </label>
+                      </>
+                    ) : (
+                      <></>
+                    )}
                   </div>
                 ) : (
                   <></>
                 )}
-                {(event.type === "Contest" &&
-                  eventData.method === "Bank Transfer (Full Payment)" &&
-                  pierce > 0) ||
-                (event.type === "Contest" &&
-                  eventData.method === "Digital Payment (Full Payment)" &&
-                  pierce > 0) ||
-                (event.type === "Contest-Part" &&
-                  eventData.method === "Bank Transfer (Full Payment)" &&
-                  pierce > 0) ||
-                (event.type === "Contest-Part" &&
-                  eventData.method === "Digital Payment (Full Payment)" &&
-                  pierce > 0) ||
+                {(event.type === "Contest" && pierce > 0) ||
+                (event.type === "Contest-Part" && pierce > 0) ||
                 (event.type === "Registration" && pierce > 0) ||
                 (event.type === "Agent" && pierce > 0) ? (
                   <div className="field">
@@ -695,8 +715,28 @@ function EventPartyAdd() {
                     </label>
                     <br />
                     <label style={{ fontSize: "10pt" }}>
-                      Please attach your proof of payment bank slip transfer |
-                      Sisipkan bukti slip pembayaran
+                      Please attach your{" "}
+                      {(event.type === "Contest-Part" &&
+                        eventData.method ===
+                          "Bank Transfer (Installment Payment)" &&
+                        pierce > 0) ||
+                      (event.type === "Contest-Part" &&
+                        eventData.method ===
+                          "Digital Payment (Installment Payment)" &&
+                        pierce > 0)
+                        ? "first proof of installment payment"
+                        : ""}{" "}
+                      bank slip transfer | Sisipkan bukti slip pembayaran{" "}
+                      {(event.type === "Contest-Part" &&
+                        eventData.method ===
+                          "Bank Transfer (Installment Payment)" &&
+                        pierce > 0) ||
+                      (event.type === "Contest-Part" &&
+                        eventData.method ===
+                          "Digital Payment (Installment Payment)" &&
+                        pierce > 0)
+                        ? "cicilan pertama anda."
+                        : ""}
                     </label>
                     <input
                       type="file"
