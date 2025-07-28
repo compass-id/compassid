@@ -632,7 +632,7 @@ function EventPartyAdd() {
                       <label className="label">
                         <strong>
                           From whom did you hear about this event? | Dari siapa
-                          anda tahu acara ini?
+                          anda tahu event/workshop ini?
                         </strong>
                       </label>
                       <input
