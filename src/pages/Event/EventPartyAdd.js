@@ -624,6 +624,7 @@ function EventPartyAdd() {
                   <></>
                 )}
                 {event.type === "Agent" ||
+                event.type === "Registration" ||
                 event.type === "Contest" ||
                 event.type === "Contest-Part" ? (
                   <>
