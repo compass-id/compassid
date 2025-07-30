@@ -110,7 +110,9 @@ function EventPartyAdd() {
         // Navigate to main page
         alert(
           `Halo ${
-            eventData.name !== "" ? eventData.name : eventData.parentName
+            eventData.name === "" || !eventData.name
+              ? eventData.parentName
+              : eventData.name
           }! Anda berhasil terdaftar dalam acara ${
             event.title
           }! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`
