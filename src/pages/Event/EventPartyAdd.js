@@ -643,8 +643,7 @@ function EventPartyAdd() {
                         name="referral"
                         value={eventData.referral}
                         onChange={handleChange}
-                        placeholder="Sebutkan nama dengan jelas.."
-                        required
+                        placeholder="Sebutkan nama dengan jelas.. (kosongkan jika tidak ada)"
                       />
                     </div>
                   </>
