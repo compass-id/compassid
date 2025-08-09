@@ -9,10 +9,16 @@ $uru = htmlspecialchars("https://compasspubindonesia.com/event-join.php?id=" . $
 $urd = htmlspecialchars("https://compasspubindonesia.com/event-join/" . $id);
 
 // Check for GET parameters and sanitize them
+if (isset($_GET['id']) == "6877a9e52277e77063816fd1") {
+header("location: https://compasspubindonesia.com/register-ro/");
+}
+
 if (isset($_GET['id'])) {
 
     $res = file_get_contents($url);
     $data = json_decode($res, true);
+
+    
 
 ?>
     <!DOCTYPE html>

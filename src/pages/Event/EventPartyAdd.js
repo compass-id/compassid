@@ -358,7 +358,8 @@ function EventPartyAdd() {
               <div className="section"></div>
               {event.type === "Registration" ||
               event.type === "Agent" ||
-              event.type === "Contest" ? (
+              event.type === "Contest" ||
+              event.type === "Contest-Part" ? (
                 <div>
                   <p>
                     Untuk mendaftar, silakan lakukan pembayaran via transfer ke
