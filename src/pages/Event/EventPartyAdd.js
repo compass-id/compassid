@@ -60,7 +60,7 @@ function EventPartyAdd() {
       event: event._id,
     };
 
-    const namer = eventData.name !== "" ? eventData.name : eventData.parentName;
+    const namer = eventData.name === "" ? eventData.parentName : eventData.name;
 
     const formData = {
       title: event.title,
