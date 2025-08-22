@@ -65,7 +65,7 @@ function EventPartyAdd() {
       group: event.group,
       start: event.start,
       end: event.end,
-      name: eventData.name,
+      name: eventData.name !== "" ? eventData.name : eventData.parentName,
       email: eventData.email,
       phone: eventData.phone,
       method: eventData.method,
