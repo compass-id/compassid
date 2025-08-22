@@ -60,14 +60,15 @@ function EventPartyAdd() {
       event: event._id,
     };
 
-    let namer = eventData.name === "" ? eventData.childName : eventData.name;
-
     const formData = {
       title: event.title,
       group: event.group,
       start: event.start,
       end: event.end,
-      name: namer,
+      name:
+        eventData.name === "" || !eventData.name
+          ? eventData.childName
+          : eventData.name,
       email: eventData.email,
       phone: eventData.phone,
       method: eventData.method,
