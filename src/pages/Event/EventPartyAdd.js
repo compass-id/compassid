@@ -14,7 +14,6 @@ function EventPartyAdd() {
 
   const [selectedFile, setSelectedFile] = useState(null);
   const [eventData, setEventData] = useState({});
-  const [fData, setFData] = useState();
 
   // Setting up useNavigate
   const navigat = useNavigate();
@@ -66,11 +65,12 @@ function EventPartyAdd() {
       group: event.group,
       start: event.start,
       end: event.end,
+      name: eventData.name,
+      parentName: eventData.parentName,
       email: eventData.email,
       phone: eventData.phone,
       method: eventData.method,
       referral: eventData.referral,
-      name: eventData.name !== "" ? eventData.name : eventData.childName,
     };
 
     const formiData = new FormData();
