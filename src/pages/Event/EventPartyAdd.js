@@ -67,6 +67,7 @@ function EventPartyAdd() {
       end: event.end,
       name: eventData.name,
       email: eventData.email,
+      phone: eventData.phone,
       method: eventData.method,
       referral: eventData.referral,
     };
@@ -107,12 +108,20 @@ function EventPartyAdd() {
           }
         );
 
+        await axios.post(
+          `https://compasspubindonesia.com/media/api/mails/notif.php`,
+          formData,
+          {
+            headers: {
+              "Content-Type": "multipart/form-data",
+            },
+          }
+        );
+
         // Navigate to main page
         alert(
           `Halo ${
-            eventData.name === "" || !eventData.name
-              ? eventData.parentName
-              : eventData.name
+            eventData.name === "" ? eventData.childName : eventData.name
           }! Anda berhasil terdaftar dalam acara ${
             event.title
           }! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`
@@ -575,7 +584,7 @@ function EventPartyAdd() {
                 </div>
                 <div className="field">
                   <label className="label">
-                    <strong>WhatsApp / Phone | WhatsApp / Telepon</strong>
+                    <strong>WhatsApp Number | Nomor WhatsApp </strong>
                   </label>
                   <input
                     type="text"
