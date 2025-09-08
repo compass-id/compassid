@@ -109,7 +109,7 @@ const EventList = () => {
     }${minutes}`;
 
     // Return the formatted date string
-    return `${dayOfWeek}, ${day} ${month} ${year}. ${time} WIB`;
+    return `${dayOfWeek}, ${day} ${month} ${year}`;
   }
 
   const handleSearch = (e) => {
@@ -191,8 +191,7 @@ const EventList = () => {
                     <div
                       className="event"
                       key={index}
-                      onClick={() => handleEvent(event._id)}
-                    >
+                      onClick={() => handleEvent(event._id)}>
                       {event.img !== "" ? (
                         <>
                           <img loading="lazy" src={event.img} alt={event.img} />
@@ -206,8 +205,7 @@ const EventList = () => {
                           <>
                             <h3
                               title={event.title}
-                              style={{ textTransform: "uppercase" }}
-                            >
+                              style={{ textTransform: "uppercase" }}>
                               {event.title}
                             </h3>
                           </>
@@ -275,8 +273,7 @@ const EventList = () => {
 
                         <button
                           onClick={() => navigate(`/event-join/${event._id}`)}
-                          className="btn"
-                        >
+                          className="btn">
                           JOIN THIS EVENT / CLASS
                         </button>
                       </div>

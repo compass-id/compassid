@@ -216,7 +216,7 @@ function EventPartyAdd() {
     }${minutes}`;
 
     // Return the formatted date string
-    return `${dayOfWeek}, ${day} ${month} ${year}`;
+    return `${dayOfWeek}, ${day} ${month} ${year}. ${time} WIB`;
   }
 
   const handleCopy = () => {
