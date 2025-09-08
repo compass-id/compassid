@@ -328,7 +328,7 @@ function EventPartyAdd() {
                 {event.start !== "" && event.type === "Registration" ? (
                   <div className="section">
                     <p>
-                      <strong>Time:</strong>
+                      <strong>Starting Time:</strong>
                     </p>
                     <p>{formatTime(event.start)}</p>
                   </div>
