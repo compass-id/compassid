@@ -686,18 +686,6 @@ function EventPartyAdd() {
                         Bank Transfer (Installment Payment) | Transfer bank
                         (pembayaran cicilan)
                       </option>
-                      <option value="Digital Payment (Full Payment)">
-                        Digital Payment (Full Payment) | Digital payment
-                        (pembayaran penuh)
-                      </option>
-                      <option value="Digital Payment (Installment Payment)">
-                        Digital Payment (Installment Payment) | Digital payment
-                        (pembayaran cicilan)
-                      </option>
-                      <option value="Credit Card">
-                        Credit Card | Kartu Kredit
-                      </option>
-                      <option value="Other">Other | Lainnya</option>
                     </select>
                     {(event.type === "Contest-Part" &&
                       eventData.method ===
