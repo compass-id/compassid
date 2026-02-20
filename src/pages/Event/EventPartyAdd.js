@@ -87,7 +87,7 @@ function EventPartyAdd() {
         // Add the Event into database with axios
         await axios.post(
           `https://seg-server.vercel.app/api/parties`,
-          cleanedData
+          cleanedData,
         );
 
         await axios.post(
@@ -97,7 +97,7 @@ function EventPartyAdd() {
             headers: {
               "Content-Type": "multipart/form-data",
             },
-          }
+          },
         );
 
         await axios.post(
@@ -107,7 +107,7 @@ function EventPartyAdd() {
             headers: {
               "Content-Type": "multipart/form-data",
             },
-          }
+          },
         );
 
         await axios.post(
@@ -117,7 +117,7 @@ function EventPartyAdd() {
             headers: {
               "Content-Type": "multipart/form-data",
             },
-          }
+          },
         );
 
         // Navigate to main page
@@ -126,7 +126,7 @@ function EventPartyAdd() {
             eventData.name ? eventData.name : eventData.parentName
           }! Anda berhasil terdaftar dalam acara ${
             event.title
-          }! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`
+          }! Silakan tunggu informasi lebih lanjut terkait acara ini yang akan kami kirim melalui email.`,
         );
 
         navigate(`/events`);
@@ -367,10 +367,10 @@ function EventPartyAdd() {
                 )}
               </div>
               <div className="section"></div>
-              {event.type === "Registration" ||
-              event.type === "Agent" ||
-              event.type === "Contest" ||
-              event.type === "Contest-Part" ? (
+              {(event.price > 0 && event.type === "Registration") ||
+              (event.price > 0 && event.type === "Agent") ||
+              (event.price > 0 && event.type === "Contest") ||
+              (event.price > 0 && event.type === "Contest-Part") ? (
                 <div>
                   <p>
                     Untuk mendaftar, silakan lakukan pembayaran via transfer ke
